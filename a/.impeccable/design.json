@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T18:30:00-05:00",
+  "title": "Design System: The Links at Norman — A · Member card",
+  "extensions": {
+    "colorMeta": {
+      "logo-blue":   { "role": "primary",   "displayName": "Logo Blue",   "canonical": "#006BB3", "tonalRamp": ["oklch(15% 0.06 245)", "oklch(26% 0.09 245)", "oklch(37% 0.11 245)", "oklch(49% 0.13 245)", "oklch(61% 0.12 245)", "oklch(73% 0.09 245)", "oklch(85% 0.05 245)", "oklch(95% 0.02 245)"] },
+      "field-blue":  { "role": "primary",   "displayName": "Field Blue",  "canonical": "#005A97", "tonalRamp": ["oklch(15% 0.06 245)", "oklch(25% 0.09 245)", "oklch(35% 0.11 245)", "oklch(44% 0.12 245)", "oklch(58% 0.11 245)", "oklch(71% 0.08 245)", "oklch(84% 0.05 245)", "oklch(95% 0.02 245)"] },
+      "scrim-blue":  { "role": "primary",   "displayName": "Scrim Blue",  "canonical": "#004F86", "tonalRamp": ["oklch(15% 0.06 245)", "oklch(24% 0.08 245)", "oklch(32% 0.10 245)", "oklch(40% 0.11 245)", "oklch(55% 0.10 245)", "oklch(69% 0.08 245)", "oklch(83% 0.05 245)", "oklch(95% 0.02 245)"] },
+      "lime":        { "role": "secondary", "displayName": "Logo Lime",   "canonical": "#85C443", "tonalRamp": ["oklch(18% 0.05 128)", "oklch(30% 0.09 128)", "oklch(42% 0.13 128)", "oklch(55% 0.16 128)", "oklch(66% 0.17 128)", "oklch(76% 0.17 128)", "oklch(87% 0.11 128)", "oklch(96% 0.04 128)"] },
+      "lime-hover":  { "role": "secondary", "displayName": "Lime Hover",  "canonical": "#93CF55", "tonalRamp": ["oklch(18% 0.05 128)", "oklch(30% 0.09 128)", "oklch(42% 0.13 128)", "oklch(55% 0.16 128)", "oklch(68% 0.17 128)", "oklch(79% 0.16 128)", "oklch(88% 0.11 128)", "oklch(96% 0.04 128)"] },
+      "ink":         { "role": "neutral",   "displayName": "Ink",         "canonical": "#0E1B26", "tonalRamp": ["oklch(16% 0.02 240)", "oklch(26% 0.02 240)", "oklch(36% 0.02 240)", "oklch(47% 0.02 240)", "oklch(58% 0.02 240)", "oklch(70% 0.015 240)", "oklch(84% 0.01 240)", "oklch(95% 0.005 240)"] },
+      "ink-2":       { "role": "neutral",   "displayName": "Ink 2",       "canonical": "#3E4C58", "tonalRamp": ["oklch(16% 0.02 240)", "oklch(26% 0.02 240)", "oklch(38% 0.02 240)", "oklch(47% 0.02 240)", "oklch(58% 0.02 240)", "oklch(70% 0.015 240)", "oklch(84% 0.01 240)", "oklch(95% 0.005 240)"] },
+      "ink-3":       { "role": "neutral",   "displayName": "Ink 3",       "canonical": "#5E6C78", "tonalRamp": ["oklch(16% 0.02 240)", "oklch(26% 0.02 240)", "oklch(38% 0.02 240)", "oklch(51% 0.02 240)", "oklch(60% 0.02 240)", "oklch(70% 0.015 240)", "oklch(84% 0.01 240)", "oklch(95% 0.005 240)"] },
+      "rule":        { "role": "neutral",   "displayName": "Rule",        "canonical": "#D8E1EA", "tonalRamp": ["oklch(16% 0.02 240)", "oklch(28% 0.02 240)", "oklch(40% 0.02 240)", "oklch(52% 0.02 240)", "oklch(64% 0.02 240)", "oklch(76% 0.02 240)", "oklch(90% 0.015 240)", "oklch(97% 0.005 240)"] },
+      "paper":       { "role": "neutral",   "displayName": "Paper",       "canonical": "#FFFFFF", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(88% 0 0)", "oklch(100% 0 0)"] },
+      "course-tint": { "role": "neutral",   "displayName": "Course Tint", "canonical": "#EEF4F9", "tonalRamp": ["oklch(16% 0.02 240)", "oklch(28% 0.02 240)", "oklch(40% 0.02 240)", "oklch(52% 0.02 240)", "oklch(64% 0.02 240)", "oklch(78% 0.02 240)", "oklch(90% 0.015 240)", "oklch(97% 0.008 240)"] },
+      "on-blue-2":   { "role": "neutral",   "displayName": "On-Blue 2",   "canonical": "#E3F0FA", "tonalRamp": ["oklch(16% 0.03 240)", "oklch(28% 0.04 240)", "oklch(40% 0.05 240)", "oklch(52% 0.05 240)", "oklch(64% 0.05 240)", "oklch(78% 0.04 240)", "oklch(90% 0.025 240)", "oklch(96% 0.015 240)"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "The hero H1 only; Boska 700, balanced wrapping." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s; emphasis inside is Boska 900, never italic." },
+      "numeral":  { "displayName": "Numeral",  "purpose": "Hole number in Logo Blue; the 900 weight also carries tag numerals and the card price." },
+      "title":    { "displayName": "Title",    "purpose": "H3s in lists and the covers block." },
+      "lead":     { "displayName": "Lead",     "purpose": "Hero sub and section leads; On-Blue 2 on blue, Ink 2 on white; 40–46ch." },
+      "body":     { "displayName": "Body",     "purpose": "Default reading text, 17/1.55, ss01 on; intros capped at 52ch." },
+      "label":    { "displayName": "Label",    "purpose": "Buttons, nav, nine labels, term keys; sentence case, never uppercase or tracked." },
+      "caption":  { "displayName": "Caption",  "purpose": "Photo and plate captions, card foot rows, footer." }
+    },
+    "shadows": [
+      { "name": "card-plastic", "value": "0 34px 60px -24px rgba(0,25,50,.65), 0 6px 14px -8px rgba(0,25,50,.4)", "purpose": "The member card's drop; the only heavy shadow." },
+      { "name": "card-sheen",   "value": "linear-gradient(112deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%)", "purpose": "One-direction highlight on both card faces; reads as plastic." },
+      { "name": "panel-lift",   "value": "0 24px 50px -36px rgba(14,27,38,.35)", "purpose": "The white hole detail panel on the course tint." },
+      { "name": "chip-lift",    "value": "0 4px 14px -6px rgba(0,0,0,.5)", "purpose": "White pill chips sitting on the aerial map." },
+      { "name": "pin",          "value": "0 2px 10px rgba(0,0,0,.5)", "purpose": "The map pin dot." },
+      { "name": "menu-drop",    "value": "0 20px 40px -20px rgba(0,0,0,.5)", "purpose": "The open mobile nav sheet." },
+      { "name": "hero-scrim",   "value": "linear-gradient(180deg, rgba(0,79,134,0) 70%, rgba(0,79,134,.9) 100%), linear-gradient(90deg, rgba(0,79,134,.94) 0%, rgba(0,79,134,.68) 38%, rgba(0,79,134,.08) 100%)", "purpose": "Scrim Blue over the hero plate, from the left; top-down variant at ≤900px." }
+    ],
+    "motion": [
+      { "name": "ease",            "value": "cubic-bezier(.2, .8, .2, 1)", "purpose": "The one house curve for every transform." },
+      { "name": "button-lift",     "value": "transform .25s ease; translateY(-1px) on hover", "purpose": "Buttons." },
+      { "name": "card-turn",       "value": "transform .8s ease; rotate(-5deg) at rest, -2deg hover, rotateY(180deg) flipped; enter from rotate(-9deg) translateY(28px)", "purpose": "The member card." },
+      { "name": "tag-rise",        "value": "transform .7s ease, opacity .7s; translateY(24px)→0, delay calc(var(--i) * 35ms)", "purpose": "Skyline tags entering in order when scrolled into view (IntersectionObserver, rootMargin -15%)." },
+      { "name": "tag-hover",       "value": "transform .35s ease; translateY(-4px), filter brightness(1.08)", "purpose": "Aerial tag hover." },
+      { "name": "reduced-motion",  "value": "transition: none on .card, .tag, .btn; entrance states removed", "purpose": "prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "hero-equal", "value": "1080px" },
+      { "name": "collapse",   "value": "900px" },
+      { "name": "phone",      "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Lime Button",
+      "kind": "button",
+      "refersTo": "button-lime",
+      "description": "The one filled action per surface: Book a tee time, Call the pro shop.",
+      "html": "<a class=\"ds-btn ds-btn-lime\" href=\"#\">Book a tee time<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M4 12 12 4M6 4h6v6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px; border-radius: 999px; border: 1.5px solid transparent; font-family: 'Switzer', system-ui, sans-serif; font-weight: 600; font-size: 16px; line-height: 1; text-decoration: none; white-space: nowrap; transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s, border-color .25s, color .25s; } .ds-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-btn:hover { transform: translateY(-1px); } .ds-btn:active { transform: translateY(0); } .ds-btn:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; } .ds-btn-lime { background: #85C443; color: #0E1B26; } .ds-btn-lime:hover { background: #93CF55; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The outlined alternative on blue surfaces.",
+      "html": "<div style=\"background:#004F86;padding:24px;display:inline-block\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\">Call the pro shop to join</a></div>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px; border-radius: 999px; border: 1.5px solid transparent; font-family: 'Switzer', system-ui, sans-serif; font-weight: 600; font-size: 16px; line-height: 1; text-decoration: none; white-space: nowrap; transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s, border-color .25s; } .ds-btn:hover { transform: translateY(-1px); } .ds-btn:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; } .ds-btn-ghost { border-color: rgba(255,255,255,.55); color: #fff; } .ds-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }"
+    },
+    {
+      "name": "Blue Button",
+      "kind": "button",
+      "refersTo": "button-blue",
+      "description": "Filled action on white surfaces (the visit section's Book).",
+      "html": "<a class=\"ds-btn ds-btn-blue\" href=\"#\">Book a tee time<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M4 12 12 4M6 4h6v6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 22px; border-radius: 999px; border: 1.5px solid transparent; font-family: 'Switzer', system-ui, sans-serif; font-weight: 600; font-size: 16px; line-height: 1; text-decoration: none; white-space: nowrap; transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s; } .ds-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-btn:hover { transform: translateY(-1px); } .ds-btn:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; } .ds-btn-blue { background: #006BB3; color: #fff; } .ds-btn-blue:hover { background: #005A97; }"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Sticky Logo Blue bar: knockout logo, right-set nav with lime hover underline, lime Book pill.",
+      "html": "<header class=\"ds-top\"><span class=\"ds-brand\">THE LINKS</span><nav class=\"ds-top-nav\"><a href=\"#\">The course</a><a href=\"#\">The club</a><a href=\"#\">Membership</a><a href=\"#\">Visit</a></nav><a class=\"ds-top-btn\" href=\"#\">Book a tee time</a></header>",
+      "css": ".ds-top { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; height: 68px; padding: 0 32px; background: #006BB3; color: #fff; font-family: 'Switzer', system-ui, sans-serif; } .ds-brand { font-family: 'Boska', serif; font-weight: 900; font-size: 22px; letter-spacing: -.01em; } .ds-top-nav { display: flex; gap: 34px; justify-self: end; } .ds-top-nav a { color: #fff; text-decoration: none; font-weight: 500; font-size: 15.5px; padding: 6px 0; border-bottom: 1.5px solid transparent; transition: border-color .2s; } .ds-top-nav a:hover { border-bottom-color: #85C443; } .ds-top-nav a:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; } .ds-top-btn { display: inline-flex; padding: 12px 18px; border-radius: 999px; background: #85C443; color: #0E1B26; font-weight: 600; font-size: 15px; line-height: 1; text-decoration: none; transition: transform .25s cubic-bezier(.2,.8,.2,1), background-color .25s; } .ds-top-btn:hover { background: #93CF55; transform: translateY(-1px); }"
+    },
+    {
+      "name": "Member Card",
+      "kind": "card",
+      "refersTo": "member-card-front",
+      "description": "The product: a credit-card-proportioned blue card that rests tilted and turns over on click.",
+      "html": "<button class=\"ds-card\" type=\"button\" aria-pressed=\"false\" onclick=\"this.classList.toggle('flipped');this.setAttribute('aria-pressed',this.classList.contains('flipped'))\"><span class=\"ds-face ds-front\"><span class=\"ds-card-kind\">Family<br>membership</span><span class=\"ds-card-price\"><b>$125</b> a month</span><span class=\"ds-card-alt\">or $1,500 a year · plus tax</span><span class=\"ds-card-foot\"><span>Golf · Pools · Fitness · Grill</span><span>Norman, Oklahoma</span></span><span class=\"ds-card-turn\">What it covers</span></span><span class=\"ds-face ds-back\"><span class=\"ds-card-kind\">This card covers</span><ul><li>Unlimited golf, no green fees</li><li>Tee times four days ahead</li><li>Pools, fitness center, the Grill</li></ul><span class=\"ds-card-foot\"><span>Member, spouse and children under 22</span></span><span class=\"ds-card-turn\">Back to front</span></span></button>",
+      "css": ".ds-card { position: relative; display: block; width: 360px; aspect-ratio: 1.586; border: 0; padding: 0; background: none; cursor: pointer; text-align: left; font-family: 'Switzer', system-ui, sans-serif; color: #fff; transform-style: preserve-3d; transform: rotate(-5deg); transition: transform .8s cubic-bezier(.2,.8,.2,1); perspective: 1600px; } .ds-card:hover { transform: rotate(-2deg); } .ds-card.flipped, .ds-card.flipped:hover { transform: rotate(0) rotateY(180deg); } .ds-card:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; } .ds-face { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 20px; border-radius: 14px; background: #006BB3; box-shadow: 0 34px 60px -24px rgba(0,25,50,.65), 0 6px 14px -8px rgba(0,25,50,.4); backface-visibility: hidden; overflow: hidden; } .ds-face::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(112deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 38%); } .ds-back { transform: rotateY(180deg); background: #005A97; } .ds-card-kind { font-family: 'Boska', serif; font-weight: 700; font-size: 1.05rem; line-height: 1; } .ds-back .ds-card-kind { font-size: 1.3rem; } .ds-card-price { font-family: 'Boska', serif; font-size: 2.4rem; line-height: 1; margin-top: auto; } .ds-card-price b { font-weight: 900; font-size: 1.35em; letter-spacing: -.01em; } .ds-card-alt { margin-top: 6px; font-size: 14px; color: #E3F0FA; } .ds-card-foot { display: flex; justify-content: space-between; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.28); font-size: 12.5px; color: #E3F0FA; } .ds-back .ds-card-foot { margin-top: auto; } .ds-card-turn { position: absolute; right: 20px; top: 20px; font-size: 13px; font-weight: 600; } .ds-back ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; font-size: 14px; line-height: 1.35; } .ds-back li { padding-left: 16px; position: relative; } .ds-back li::before { content: ''; position: absolute; left: 0; top: .55em; width: 7px; height: 7px; border-radius: 50%; background: #85C443; }"
+    },
+    {
+      "name": "Aerial Tag",
+      "kind": "chip",
+      "refersTo": "course-ground",
+      "description": "One hole in the skyline: an aerial plate bottom-aligned on the blue baseline with a Boska 900 numeral; lime outline when selected.",
+      "html": "<div class=\"ds-tags\"><a class=\"ds-tag\" href=\"#\"><span class=\"ds-plate\" style=\"height:140px\"></span><span class=\"ds-tag-foot\"><b>12</b><span>Par 3 · 202</span></span></a><a class=\"ds-tag\" href=\"#\" aria-current=\"true\"><span class=\"ds-plate\" style=\"height:200px\"></span><span class=\"ds-tag-foot\"><b>13</b><span>Par 4 · 412</span></span></a><a class=\"ds-tag\" href=\"#\"><span class=\"ds-plate\" style=\"height:180px\"></span><span class=\"ds-tag-foot\"><b>14</b><span>Par 4 · 379</span></span></a></div>",
+      "css": ".ds-tags { display: flex; align-items: flex-end; gap: 12px; padding: 24px 24px 6px; background: #EEF4F9; border-bottom: 2px solid #006BB3; font-family: 'Switzer', system-ui, sans-serif; } .ds-tag { display: block; width: 110px; flex: 0 0 110px; text-decoration: none; color: #0E1B26; transform-origin: bottom; transition: transform .35s cubic-bezier(.2,.8,.2,1); } .ds-plate { display: block; width: 100%; border-radius: 4px 4px 0 0; background: linear-gradient(160deg, #6a9a4a, #8fb85c 60%, #4d7a8f); outline: 3px solid transparent; transition: outline-color .25s, filter .25s; } .ds-tag:hover { transform: translateY(-4px); } .ds-tag:hover .ds-plate { filter: brightness(1.08); } .ds-tag[aria-current=\"true\"] .ds-plate { outline-color: #85C443; } .ds-tag:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; border-radius: 2px; } .ds-tag-foot { display: flex; align-items: baseline; gap: 6px; margin-top: 8px; white-space: nowrap; } .ds-tag-foot b { font-family: 'Boska', serif; font-weight: 900; font-size: 24px; line-height: 1; } .ds-tag-foot span { font-size: 13px; color: #5E6C78; } .ds-tag[aria-current=\"true\"] .ds-tag-foot b { color: #006BB3; } .ds-tag[aria-current=\"true\"] .ds-tag-foot span { color: #0E1B26; font-weight: 600; }"
+    },
+    {
+      "name": "Hole Panel",
+      "kind": "card",
+      "refersTo": "hole-panel",
+      "description": "White panel on the course tint: Boska 900 hole number in Logo Blue, par line, note, prev/next over a hairline.",
+      "html": "<article class=\"ds-hole\"><div class=\"ds-hole-text\"><div class=\"ds-hole-no\">No. 13</div><h3 class=\"ds-hole-par\">Par 4 <span>412 yards</span></h3><p class=\"ds-hole-note\">The signature hole. It wraps around the 12-acre lake, and the view is the one you remember.</p></div><nav class=\"ds-hole-nav\"><a class=\"ds-hn\" href=\"#\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M13 8H3M7 4 3 8l4 4\"/></svg>No. 12</a><a class=\"ds-hn\" href=\"#\">No. 14<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h10M9 4l4 4-4 4\"/></svg></a></nav></article>",
+      "css": ".ds-hole { display: grid; gap: 24px; background: #fff; border-radius: 8px; padding: 32px; box-shadow: 0 24px 50px -36px rgba(14,27,38,.35); font-family: 'Switzer', system-ui, sans-serif; color: #0E1B26; max-width: 520px; } .ds-hole-no { font-family: 'Boska', serif; font-weight: 900; font-size: 5rem; line-height: .9; letter-spacing: -.02em; color: #006BB3; } .ds-hole-par { margin: 10px 0 0; font-family: 'Switzer', system-ui, sans-serif; font-weight: 700; font-size: 2.2rem; line-height: 1.1; } .ds-hole-par span { margin-left: .35em; color: #5E6C78; font-weight: 400; } .ds-hole-note { margin: 14px 0 0; font-size: 1.15rem; line-height: 1.5; color: #3E4C58; max-width: 44ch; } .ds-hole-nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 16px; padding-top: 18px; border-top: 1px solid #D8E1EA; } .ds-hn { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: #006BB3; text-decoration: none; padding: 8px 0; } .ds-hn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-hn:hover { text-decoration: underline; text-underline-offset: .14em; } .ds-hn:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Blue Field Terms",
+      "kind": "custom",
+      "refersTo": "blue-field",
+      "description": "Field Blue section with Boska headline (900 emphasis), a three-up term list over a white-30% rule, and dash-bulleted covers.",
+      "html": "<section class=\"ds-field\"><h2>One family membership. <em>$125 a month.</em></h2><dl class=\"ds-terms\"><div><dt>Pay for the year instead</dt><dd>$1,500 a year, plus tax, paid in full.</dd></div><div><dt>Cart plan</dt><dd>$50 a month, optional.</dd></div><div><dt>Tee times</dt><dd>Members book four days ahead.</dd></div></dl><ul class=\"ds-covers\"><li>Unlimited golf with no green fees</li><li>The pools, cabana and patio</li><li>The fitness center, whirlpool and sauna</li><li>The Grill</li></ul></section>",
+      "css": ".ds-field { background: #005A97; color: #fff; padding: 48px 32px; font-family: 'Switzer', system-ui, sans-serif; font-size: 17px; line-height: 1.55; } .ds-field h2 { margin: 0; font-family: 'Boska', serif; font-weight: 700; font-size: 3rem; line-height: .98; letter-spacing: -.005em; max-width: 16ch; } .ds-field h2 em { font-style: normal; font-weight: 900; } .ds-terms { margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3); } .ds-terms dt { font-size: 14.5px; font-weight: 600; color: #E3F0FA; } .ds-terms dd { margin: 6px 0 0; font-size: 1.05rem; line-height: 1.45; } .ds-covers { list-style: none; margin: 32px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,.3); columns: 2; column-gap: 32px; } .ds-covers li { break-inside: avoid; padding: 7px 0 7px 18px; position: relative; } .ds-covers li::before { content: ''; position: absolute; left: 0; top: 18px; width: 8px; height: 1.5px; background: #E3F0FA; }"
+    },
+    {
+      "name": "Map Chip",
+      "kind": "chip",
+      "refersTo": "map-chip",
+      "description": "White pill links sitting on the aerial map; lime on hover.",
+      "html": "<div class=\"ds-map\"><span class=\"ds-pin\"><i></i><b>Clubhouse &amp; pro shop</b></span><div class=\"ds-map-links\"><a href=\"#\">Open in Google Maps</a><a href=\"#\">Apple Maps</a></div></div>",
+      "css": ".ds-map { position: relative; width: 420px; height: 260px; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, #5b8a3f, #7fae55 50%, #4a7b93); font-family: 'Switzer', system-ui, sans-serif; } .ds-pin { position: absolute; left: 55%; top: 40%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 6px; } .ds-pin i { display: block; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid #0E1B26; box-shadow: 0 2px 10px rgba(0,0,0,.5); } .ds-pin b { font-size: 13px; font-weight: 600; color: #fff; background: #0E1B26; padding: 5px 9px; border-radius: 4px; white-space: nowrap; } .ds-map-links { position: absolute; left: 14px; bottom: 14px; display: flex; gap: 8px; } .ds-map-links a { font-size: 14px; font-weight: 600; text-decoration: none; color: #0E1B26; background: #fff; padding: 9px 13px; border-radius: 999px; box-shadow: 0 4px 14px -6px rgba(0,0,0,.5); transition: background-color .25s; } .ds-map-links a:hover { background: #85C443; } .ds-map-links a:focus-visible { outline: 3px solid #85C443; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Card and the Ground",
+    "overview": "The page has one product, a family membership card, and one proof, the real course. Everything in the system serves those two objects. The club's own logo colours are the whole palette: logo blue is the field the card and header sit on, lime is reserved for the thing you press and the thing that is selected, and white paper carries the reading. Nothing is drawn to stand in for the course; the course is shown as surveyed, every hole an aerial plate at one ground scale, with the yardage line and 100-yard marks drawn onto the photograph in lime. This is a club site that looks like the club's own card and its own land, not like a template with the club's name dropped in.\n\nDensity is editorial and unhurried: generous section padding, big Boska headlines that drop to a tight 0.98 line-height, and Switzer body at 17px with a comfortable 1.55 measure. Hierarchy is carried by size and weight contrast in the display face (700 for headlines, 900 for numerals and the price), never by small uppercase labels. The build contains no text-transform, no eyebrows, no stat band, no icon grid.\n\nThe build rejects the hero → slogan → number band → card grid template. It also rejects code-drawn illustration: when a diagram is needed (hole routing, the course locator), it is a line drawn over the real aerial.",
+    "keyCharacteristics": [
+      "Two-colour brand palette (logo blue, logo lime) plus white paper and a blue-tinted course ground; nothing else is introduced.",
+      "Boska display at 700/900 against Switzer text; the 900 weight is for numbers (hole No., price, tag numerals) and the one emphasised phrase.",
+      "Real aerial plates as a component family: one ground scale, tee-down, with lime yardage marks drawn in SVG over the photo.",
+      "Pills for every action; soft radii (4/6/8/14) for images, panels and the card.",
+      "Depth only on objects that are physically \"on\" the page: the card (plastic), the hole panel, the map chips. Everything else is flat tonal layering.",
+      "Motion is one easing curve (cubic-bezier(.2,.8,.2,1)), used for the card turn, tag rise and button lift, and fully disabled under prefers-reduced-motion."
+    ],
+    "rules": [
+      { "name": "The Press-or-Selected Rule", "body": "Lime marks what you can press and what is currently chosen (plus the survey's own drawn marks). It is never a background, never a heading colour, never decoration.", "section": "colors" },
+      { "name": "The Two-Blue Rule", "body": "Surfaces are Logo Blue or Field Blue; Scrim Blue exists only as alpha over a photograph. Do not introduce a fourth blue.", "section": "colors" },
+      { "name": "The Alpha Hairline Rule", "body": "On white, rules are `rule`. On blue, rules are white at 28–30% alpha. Neither ever uses Ink 3.", "section": "colors" },
+      { "name": "The Weight-Not-Case Rule", "body": "Hierarchy comes from Boska 700 vs 900 and from size. The build has zero uppercase and zero letter-spaced labels; keep it that way.", "section": "typography" },
+      { "name": "The Two-Family Rule", "body": "Boska for headlines and numbers; Switzer for everything you read, including small headings like \"Front nine\". No third face.", "section": "typography" },
+      { "name": "The On-Top Rule", "body": "A shadow means the element is a physical object laid on the page: the card, the panel, a chip on a photo. Text blocks, sections and images never carry one.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put every surface on Logo Blue, Field Blue, Paper or Course Tint, and reach for lime only when something is pressable or selected (The Press-or-Selected Rule).",
+      "Do set headlines in Boska 700 and numbers in Boska 900; use size and weight for hierarchy, sentence case throughout (The Weight-Not-Case Rule).",
+      "Do keep buttons as pills (999px, 15px 22px, Switzer 600 16px) with one lime action and an outline or blue alternative per surface.",
+      "Do show the course as the real aerial at one ground scale, with any routing or yardage drawn in lime SVG over the photograph, and keep the provenance line in the footer.",
+      "Do use `rule` (#D8E1EA) hairlines on white and white at 28–30% alpha on blue (The Alpha Hairline Rule).",
+      "Do use the house ease cubic-bezier(.2,.8,.2,1) for transforms, and switch every transition off under prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add uppercase, letter-spaced eyebrows or kickers above headlines; the build has none and hierarchy does not need them.",
+      "Don't introduce a fourth blue, a grey background, or any accent beyond the logo's lime (The Two-Blue Rule).",
+      "Don't put shadows on text blocks, sections or photographs; only the card, the hole panel and chips on the map sit on top of the page (The On-Top Rule).",
+      "Don't draw the course or its holes as illustration, icons or abstract shapes; the aerial plate is the component.",
+      "Don't fill a surface with lime or use it as a heading colour.",
+      "Don't use a third typeface or a system display face in place of Boska."
+    ]
+  }
+}
