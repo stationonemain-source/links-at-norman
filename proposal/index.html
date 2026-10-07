@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposal for The Links at Norman · Station.Solutions</title>
+<meta name="description" content="A new website for The Links at Norman Golf &amp; Athletic Club: two finished designs, the whole course from the air, and the plan to launch.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#006BB3">
+<link rel="preload" href="../assets/fonts/boska-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23006BB3'/><path d='M12 27V5l11 4.5L12 14' fill='none' stroke='white' stroke-width='2.4' stroke-linejoin='round'/><path d='M12 5l11 4.5L12 14z' fill='%2385C443'/></svg>">
+<style>
+:root{
+  --blue:#006BB3;--blue-deep:#005A97;--lime:#85C443;--ink:#0E1B26;--ink-2:#3E4C58;--ink-3:#5E6C78;
+  --rule:#D8E1EA;--paper:#fff;--tint:#EEF4F9;--on-blue:#E3F0FA;
+  --display:'Boska','Times New Roman',serif;--text:'Switzer',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --gutter:clamp(20px,5vw,72px);--max:1120px;--ease:cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);text-underline-offset:.14em;text-decoration-thickness:1px}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;line-height:1;letter-spacing:-.005em;text-wrap:balance}
+h3{line-height:1.12}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+::selection{background:var(--lime);color:var(--ink)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:2px}
+.wrap{max-width:calc(var(--max) + 2*var(--gutter));margin:0 auto;padding:0 var(--gutter)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:16px;line-height:1;text-decoration:none;white-space:nowrap;transition:transform .25s var(--ease),background-color .25s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{background:#93CF55}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-deep)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;padding:clamp(28px,4vw,44px) 0 clamp(56px,8vw,96px)}
+.cover-top{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:14.5px;color:var(--on-blue)}
+.cover-top img{height:46px;width:auto}
+.cover h1{margin-top:clamp(48px,8vw,104px);font-size:clamp(2.6rem,1.4rem + 5vw,5.4rem);max-width:15ch}
+.cover .lede{margin-top:24px;font-size:clamp(1.1rem,1rem + .45vw,1.35rem);line-height:1.5;color:var(--on-blue);max-width:52ch}
+.cover-meta{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.3);font-size:15px;color:var(--on-blue)}
+.cover-meta b{display:block;color:#fff;font-weight:600}
+.toc{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.toc .wrap{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;padding-top:12px;padding-bottom:12px;font-size:14.5px;font-weight:500}
+.toc a{color:var(--ink-2);text-decoration:none;white-space:nowrap}.toc a:hover{color:var(--blue)}
+
+section{padding:clamp(56px,8vw,104px) 0}
+section+section{border-top:1px solid var(--rule)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,4vw,64px);align-items:end}
+.head h2{font-size:clamp(2.1rem,1.3rem + 3vw,3.8rem)}
+.head p{color:var(--ink-2);font-size:clamp(1rem,.96rem + .3vw,1.15rem);max-width:56ch}
+
+/* summary */
+.summary p{font-size:clamp(1.15rem,1rem + .6vw,1.5rem);line-height:1.45;max-width:46ch;margin-top:28px}
+.summary p+p{color:var(--ink-2);font-size:clamp(1.02rem,.98rem + .3vw,1.18rem);max-width:60ch;margin-top:18px}
+
+/* the two designs */
+.designs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:clamp(36px,4vw,56px)}
+.design figure{margin:0;border-radius:8px;overflow:hidden;box-shadow:0 24px 50px -32px rgba(14,27,38,.45);border:1px solid var(--rule)}
+.design h3{font-size:clamp(1.5rem,1.2rem + 1vw,2.1rem);margin-top:22px}
+.design p{margin-top:10px;color:var(--ink-2);max-width:48ch}
+.design .btn{margin-top:18px}
+.design .shot2{margin-top:14px}
+.phones{display:flex;gap:16px;align-items:flex-start;margin-top:clamp(28px,3vw,40px)}
+.phones figure{margin:0;width:180px;border-radius:14px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 18px 40px -28px rgba(14,27,38,.5)}
+.phones p{align-self:center;color:var(--ink-3);font-size:15px;max-width:34ch}
+
+/* built + found lists */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:clamp(32px,4vw,48px)}
+.grid3 h3{font-size:1.4rem}
+.grid3 p{margin-top:10px;color:var(--ink-2)}
+.found{margin-top:clamp(28px,3vw,40px);border-top:1px solid var(--rule)}
+.found li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(16px,3vw,48px);padding:22px 0;border-bottom:1px solid var(--rule)}
+.found h3{font-size:1.3rem}
+.found p{color:var(--ink-2)}
+.found code{font-size:.92em;background:var(--tint);padding:1px 6px;border-radius:4px;word-break:break-all}
+
+/* plan */
+.steps{counter-reset:s;margin-top:clamp(28px,3vw,40px);display:grid;gap:0;border-top:1px solid var(--rule)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1.3fr);gap:clamp(12px,3vw,40px);padding:22px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:900;font-size:2.4rem;line-height:1;color:var(--blue)}
+.steps h3{font-size:1.3rem}
+.steps p{color:var(--ink-2)}
+
+/* price */
+.price{background:var(--blue-deep);color:#fff}
+.price .head p{color:var(--on-blue)}
+.price-tbl{width:100%;border-collapse:collapse;margin-top:clamp(28px,3vw,40px);font-variant-numeric:tabular-nums}
+.price-tbl th,.price-tbl td{text-align:left;padding:16px 12px 16px 0;border-bottom:1px solid rgba(255,255,255,.28);vertical-align:top}
+.price-tbl thead th{font-size:14px;font-weight:600;color:var(--on-blue)}
+.price-tbl td:last-child,.price-tbl th:last-child{text-align:right;white-space:nowrap;padding-right:0}
+.price-tbl td small{display:block;margin-top:4px;color:var(--on-blue);font-size:14.5px}
+.price-tbl tfoot td{font-family:var(--display);font-size:1.7rem;font-weight:700;border-bottom:0;padding-top:20px}
+.price .note{margin-top:20px;color:var(--on-blue);max-width:60ch}
+
+/* need + close */
+.need{margin-top:clamp(28px,3vw,40px);columns:2;column-gap:48px}
+.need li{break-inside:avoid;padding:10px 0 10px 22px;position:relative;border-bottom:1px solid var(--rule)}
+.need li::before{content:'';position:absolute;left:0;top:21px;width:10px;height:1.5px;background:var(--ink-3)}
+.close{background:var(--tint)}
+.close h2{font-size:clamp(2.1rem,1.3rem + 3vw,3.8rem)}
+.close p{margin-top:18px;max-width:56ch;color:var(--ink-2);font-size:1.1rem}
+.close .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+footer{padding:28px 0 40px;font-size:13.5px;color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+@media (max-width:900px){
+  .head,.designs,.grid3,.found li{grid-template-columns:1fr}
+  .steps li{grid-template-columns:48px minmax(0,1fr)}
+  .steps li p{grid-column:2}
+  .need{columns:1}
+  .phones figure{width:46%}
+  .phones p{display:none}
+}
+@media (max-width:560px){
+  .price-tbl thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .price-tbl tr{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.28)}
+  .price-tbl td{display:block;border:0;padding:0;text-align:left!important}
+  .price-tbl td+td{margin-top:6px}
+  .cover-top span{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="cover">
+ <div class="wrap">
+  <div class="cover-top"><img src="../assets/logo-white.png" alt="The Links, Golf &amp; Athletic Club" width="640" height="488"><span>Proposal · prepared by Station.Solutions</span></div>
+  <h1>A website as good as the course.</h1>
+  <p class="lede">Two finished designs for The Links at Norman, both built on the actual course from the air, both sending every golfer straight into your tee sheet, and both selling the family membership the way the club actually works.</p>
+  <div class="cover-meta">
+   <div><b>For</b>Chris Johnston, General Manager</div>
+   <div><b>Prepared by</b>Station.Solutions</div>
+   <div><b>Date</b>7 October 2026</div>
+  </div>
+ </div>
+</header>
+
+<nav class="toc" aria-label="Proposal sections"><div class="wrap">
+ <a href="#summary">Summary</a><a href="#designs">The two designs</a><a href="#built">What's built</a><a href="#found">What we found</a><a href="#plan">The plan</a><a href="#price">What it costs</a><a href="#need">What we need</a>
+</div></nav>
+
+<main>
+
+<section class="summary" id="summary" aria-labelledby="sum-h">
+ <div class="wrap">
+  <h2 id="sum-h" class="head-solo" style="font-size:clamp(2.1rem,1.3rem + 3vw,3.8rem)">The course is better than the website.</h2>
+  <p>A Lindy Lindsey eighteen around a twelve-acre lake, two pools, a gym and the Grill, all for $125 a month. Today a visitor sees one photograph of it.</p>
+  <p>We rebuilt the site from scratch, twice, so you can pick the one that feels like the club. Every hole is on it, shown from the air at the same scale with your own notes on how it plays. The membership price and what it covers are on the first screen. The Book a tee time button goes to your Club Caddie tee sheet on today's date, on every page.</p>
+ </div>
+</section>
+
+<section id="designs" aria-labelledby="designs-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="designs-h">The two designs</h2>
+   <p>Same facts, same photographs, same tee-sheet links. Open both on your phone; that's where most of your members will see it.</p>
+  </div>
+  <div class="designs">
+   <article class="design">
+    <figure><img src="img/a-fold.jpg" alt="Design A: the lake from the air behind the headline and a $125 family membership card" width="1400" height="875" loading="lazy"></figure>
+    <figure class="shot2"><img src="img/a-holes.jpg" alt="Design A: all eighteen holes from the air, side by side at one scale" width="1400" height="875" loading="lazy"></figure>
+    <h3>A · The member card</h3>
+    <p>Built around the family membership. The card turns over to show what it covers. Below it, all eighteen holes side by side at true scale; tap one to open it with its yardage marks and your note.</p>
+    <a class="btn btn-blue" href="../a/" target="_blank" rel="noopener">Open design A<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+   </article>
+   <article class="design">
+    <figure><img src="img/b-fold.jpg" alt="Design B: 'A yardage book for the Links' over the club's evening photograph" width="1400" height="875" loading="lazy"></figure>
+    <figure class="shot2"><img src="img/b-page.jpg" alt="Design B: hole one from the air with the line of play and 100-yard marks" width="1400" height="875" loading="lazy"></figure>
+    <h3>B · The yardage book</h3>
+    <p>Reads like a course feature in a golf magazine. You turn through the eighteen holes one page at a time, each with the line of play and a mark every hundred yards. The scorecard opens any hole.</p>
+    <a class="btn btn-blue" href="../b/" target="_blank" rel="noopener">Open design B<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+   </article>
+  </div>
+  <div class="phones">
+   <figure><img src="img/a-phone.jpg" alt="Design A on a phone" width="390" height="844" loading="lazy"></figure>
+   <figure><img src="img/b-phone.jpg" alt="Design B on a phone" width="390" height="844" loading="lazy"></figure>
+   <p>Both on a phone: book a tee time is one tap from anywhere, and the membership price is on the first screen of A.</p>
+  </div>
+ </div>
+</section>
+
+<section id="built" aria-labelledby="built-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="built-h">What's already built</h2>
+   <p>Everything you see in the two designs is working now, not a mock-up.</p>
+  </div>
+  <div class="grid3">
+   <div><h3>All eighteen holes</h3><p>Each hole from the air, tee to green, at one scale, with the line of play, your black-tee yardage and a mark every hundred yards. Your own note on how it plays sits beside it.</p></div>
+   <div><h3>Your tee sheet, one tap away</h3><p>Every Book a tee time button opens your Club Caddie tee sheet on today's date. The member portal is linked too. Nothing new for the pro shop to run.</p></div>
+   <div><h3>Membership that sells itself</h3><p>$125 a month or $1,500 a year, who "family" covers, and everything the card opens: unlimited golf, pools, the gym, the Grill, the associations, the Lindsey network.</p></div>
+   <div><h3>The club, not just the course</h3><p>Your own photos of the pool, gym, whirlpool, Grill, pro shop and clubhouse, sharpened to 4K where the originals allow.</p></div>
+   <div><h3>Found on Google</h3><p>Each page tells search engines it is a golf course in Norman, with the address, phone and location, so it can show up properly when people search for golf near OU.</p></div>
+   <div><h3>Fast on any phone</h3><p>Checked on desktop and phone with no errors and nothing that scrolls sideways. Your rules (collared shirts, soft spikes, carts required) are written in plainly.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="found" aria-labelledby="found-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="found-h">What we found on the current site</h2>
+   <p>Checked on linksatnormangolf.com on 7 October 2026. None of it is hard to fix; all of it costs you golfers.</p>
+  </div>
+  <ul class="found">
+   <li><h3>The Book Tee Time button opens a date that has passed</h3><p>The link behind it is hard-wired to <code>date=06/01/2026</code> with an old session code attached, so every golfer who taps it starts on June 1 and has to find today themselves. Some won't.</p></li>
+   <li><h3>The 17th hole has the 16th's description</h3><p>Hole 17 is a 503-yard par 5, but its note reads "A great par 3. A par is all you want," copied from 16.</p></li>
+   <li><h3>Hole 2 is labelled "Par 2"</h3><p>The course tour's second heading says "Par 2" where it should say "Hole 2".</p></li>
+   <li><h3>The designer's name is spelled two ways</h3><p>"Lindy Lindsey" in one place and "Lyndy Lindsey" on the amenities page.</p></li>
+   <li><h3>One photograph of the course</h3><p>The whole site has a single picture of the golf. The lake, the 13th, the cedar holes: none of it is shown, so nobody can see why it's worth the drive.</p></li>
+   <li><h3>No hours and no green fees</h3><p>A golfer deciding where to play today can't see either, so they call or they go somewhere that shows them. (We haven't put these on the new site either; we'll add them when you give us the numbers.)</p></li>
+  </ul>
+ </div>
+</section>
+
+<section id="plan" aria-labelledby="plan-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="plan-h">The plan</h2>
+   <p>About two weeks from a yes, most of it waiting on your answers.</p>
+  </div>
+  <ol class="steps">
+   <li><h3>Pick a design</h3><p>A, B, or a mix. Tell us what to change; we make it before you decide anything else.</p></li>
+   <li><h3>Fill in the gaps</h3><p>Hours, green fees and twilight rates, any league or event you want shown, and any photos you have of the course.</p></li>
+   <li><h3>Move the address over</h3><p>We point linksatnormangolf.com at the new site, keep your email working, and fix the tee-time link everywhere it appears.</p></li>
+   <li><h3>Launch and check</h3><p>We test it on phones and desktops, submit it to Google, and walk you through changing anything later.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="price" id="price" aria-labelledby="price-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="price-h">What it costs</h2>
+   <p>One price for the site. No setup fees and nothing hidden.</p>
+  </div>
+  <table class="price-tbl">
+   <thead><tr><th scope="col">Item</th><th scope="col">When</th><th scope="col">Price</th></tr></thead>
+   <tbody>
+    <tr><td>Website, finished and launched<small>Your chosen design, every page, all eighteen holes, the tee-sheet links, Google setup, moving your address</small></td><td>One time</td><td>$2,500</td></tr>
+    <tr><td>Hosting &amp; care<small>Hosting, domain renewal, updates and security</small></td><td>Monthly, from launch</td><td>Quoted with you</td></tr>
+    <tr><td>Course photography (optional)<small>A morning on the course for ground-level photos to sit beside the aerials. We arrange it; the photographer bills you directly.</small></td><td>If you want it</td><td>Photographer's quote</td></tr>
+   </tbody>
+   <tfoot><tr><td>Total to launch</td><td></td><td>$2,500</td></tr></tfoot>
+  </table>
+  <p class="note">Half to start, half at launch. The preview you're looking at is included in that price.</p>
+ </div>
+</section>
+
+<section id="need" aria-labelledby="need-h">
+ <div class="wrap">
+  <div class="head">
+   <h2 id="need-h">What we need from you</h2>
+   <p>Most of it is a five-minute email.</p>
+  </div>
+  <ul class="need">
+   <li>Which design, and anything to change</li>
+   <li>Pro shop hours, and whether they change by season</li>
+   <li>Green fees, twilight and cart rates you want public</li>
+   <li>Leagues, tournaments or events to feature</li>
+   <li>Any photos of the course you already have</li>
+   <li>Login for the domain (or who holds it)</li>
+  </ul>
+ </div>
+</section>
+
+<section class="close" aria-labelledby="yes-h">
+ <div class="wrap">
+  <h2 id="yes-h">Ready when you are</h2>
+  <p>Reply to the email this came with and we'll set up a call, or come by the pro shop. Want changes first? Tell us what, and we'll make them before you decide.</p>
+  <div class="row">
+   <a class="btn btn-blue" href="../a/" target="_blank" rel="noopener">Open design A</a>
+   <a class="btn btn-blue" href="../b/" target="_blank" rel="noopener">Open design B</a>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer><div class="wrap"><span>Station.Solutions · proposal for The Links at Norman · 7 October 2026 · valid for 30 days</span><span>Private preview. Not indexed by search engines. Aerial imagery: City of Norman 2019 orthophotography and USGS NAIP 2021, rendered as spring with Higgsfield.</span></div></footer>
+
+<script>/* proposal-view: tells Station this page was opened, only through a tagged link (?v=<10 hex>, added by the Proposals tab's Send). Never from a Station browser: ?me=1 (Circle's Proposal button adds it) marks this browser as ours for good. Fires once, after 4s on screen or a scroll/tap, then tidies the address bar. */(function(){try{var q=new URLSearchParams(location.search),ls=window.localStorage,own=false;try{if(q.get("me")==="1")ls.setItem("station-own","1");own=ls.getItem("station-own")==="1";}catch(e){}var v=q.get("v");q.delete("v");q.delete("me");history.replaceState(null,"",location.pathname+(q.toString()?"?"+q:"")+location.hash);if(own||!/^[a-f0-9]{10}$/.test(v||""))return;var done=false,u="https://n8n.srv1748596.hstgr.cloud/webhook/proposal-view?v="+v+"&w="+encodeURIComponent(location.pathname);function go(){if(done||document.visibilityState!=="visible")return;done=true;if(!(navigator.sendBeacon&&navigator.sendBeacon(u)))fetch(u,{method:"POST",mode:"no-cors",keepalive:true});}setTimeout(go,4000);addEventListener("scroll",go,{once:true,passive:true});addEventListener("pointerdown",go,{once:true});}catch(e){}})();</script>
+</body>
+</html>

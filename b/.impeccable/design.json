@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T18:30:00-05:00",
+  "title": "Design System: The Links at Norman — B · Yardage Book",
+  "extensions": {
+    "colorMeta": {
+      "lime": { "role": "primary", "displayName": "Highlighter Lime", "canonical": "#85C443", "tonalRamp": ["#1B2E0C", "#2E4C15", "#436C20", "#598E2C", "#70AD38", "#85C443", "#B2DA87", "#EEF7E3"] },
+      "lime-wash": { "role": "primary", "displayName": "Lime Wash", "canonical": "#EEF7E3", "tonalRamp": ["#1B2E0C", "#2E4C15", "#436C20", "#598E2C", "#70AD38", "#85C443", "#B2DA87", "#EEF7E3"] },
+      "blue": { "role": "secondary", "displayName": "Logo Blue", "canonical": "#006BB3", "tonalRamp": ["#001E33", "#00324F", "#00486F", "#005A91", "#006BB3", "#2E8ACB", "#7DB7E0", "#E3F0F9"] },
+      "page": { "role": "neutral", "displayName": "Page", "canonical": "#FFFFFF", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#141414", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2 (8.6:1)", "canonical": "#4A4A4A", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3 (5.3:1)", "canonical": "#6B6B6B", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#DADADA", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "total-tint": { "role": "neutral", "displayName": "Total Tint", "canonical": "#F6F6F6", "tonalRamp": ["#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#F6F6F6", "#FFFFFF"] },
+      "button-pressed": { "role": "neutral", "displayName": "Pressed Black", "canonical": "#000000", "tonalRamp": ["#000000", "#141414", "#2E2E2E", "#4A4A4A", "#6B6B6B", "#9A9A9A", "#DADADA", "#FFFFFF"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The opener title only; 12ch max, Gambetta 400 with italic emphasis." },
+      "headline": { "displayName": "Headline", "purpose": "Section openers at 500; the per-hole par at 400 with a Supreme yardage line beneath." },
+      "pull": { "displayName": "Pull", "purpose": "The membership pull quote, 22ch, first line washed in lime." },
+      "note": { "displayName": "Note", "purpose": "The club's own hole note on each page, 30ch." },
+      "standfirst": { "displayName": "Standfirst", "purpose": "Opener standfirst and section intros in Ink 2, 46-54ch." },
+      "title": { "displayName": "Title", "purpose": "Sub-heads in the scorecard aside and Included column." },
+      "body": { "displayName": "Body", "purpose": "Running text at 18px; never smaller in Gambetta." },
+      "figures": { "displayName": "Figures", "purpose": "Facts line, dl values, buttons (500), scorecard cells, counter; tabular numerals." },
+      "label": { "displayName": "Label", "purpose": "Masthead, folios, map chips, scorecard row labels (500, 13px)." },
+      "caption": { "displayName": "Caption", "purpose": "Photo captions, term labels, colophon in Ink 3." },
+      "plate-mark": { "displayName": "Plate mark", "purpose": "Yardage numerals on the aerial plates (SVG units; 46px on the upright plate)." }
+    },
+    "shadows": [
+      { "name": "map-pin-only", "value": "0 2px 8px rgba(0,0,0,.45)", "purpose": "Lifts the 16px lime pin off the visit photograph. A marker, not a surface shadow; the sheet is otherwise flat." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.2, .8, .2, 1)", "purpose": "Button lift transform (.25s)." },
+      { "name": "fill", "value": ".2s", "purpose": "Background and colour change on buttons and turn controls." },
+      { "name": "page-turn", "value": "scrollTo behavior smooth; instant under prefers-reduced-motion", "purpose": "Native scroll-snap page turn driven by buttons, arrow keys and scorecard links." }
+    ],
+    "breakpoints": [
+      { "name": "book", "value": "1000px", "purpose": "Columns collapse, landscape plate swaps for upright, locator hides, masthead nav drops to its own ruled row." },
+      { "name": "phone", "value": "560px", "purpose": "Opener photo 4:3, turn labels hide, membership buttons full width, scorecard back to 15px." }
+    ],
+    "filters": [
+      { "name": "ground-grey", "value": "grayscale(1) contrast(1.05) brightness(1.04)", "purpose": "Locator and visit-map aerials, so the lime route reads." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink button with a stroked arrow; Book a tee time, Call the pro shop.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Book a tee time <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; background: #141414; color: #fff; text-decoration: none; border-radius: 3px; font-family: 'Supreme', system-ui, sans-serif; font-size: 15.5px; font-weight: 500; line-height: 1; transition: background-color .2s, transform .25s cubic-bezier(.2,.8,.2,1); } .ds-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-btn:hover { background: #000; transform: translateY(-1px); } .ds-btn:focus-visible { outline: 2px solid #141414; outline-offset: 4px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Bordered ink-on-white button that inverts on hover; the secondary action beside a primary.",
+      "html": "<a class=\"ds-btn-quiet\" href=\"#\">ProShop@LinksAtNorman.Golf</a>",
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; gap: 10px; padding: 14px 20px; background: none; color: #141414; border: 1px solid #141414; text-decoration: none; border-radius: 3px; font-family: 'Supreme', system-ui, sans-serif; font-size: 15.5px; font-weight: 500; line-height: 1; transition: background-color .2s, color .2s; } .ds-btn-quiet:hover { background: #141414; color: #fff; } .ds-btn-quiet:focus-visible { outline: 2px solid #141414; outline-offset: 4px; }"
+    },
+    {
+      "name": "Turn Buttons and Counter",
+      "kind": "nav",
+      "refersTo": "button-turn",
+      "description": "Previous / counter / Next row beneath the spread, over a hairline.",
+      "html": "<div class=\"ds-book-nav\"><button class=\"ds-turn\" type=\"button\">&larr; <span>Previous</span></button><p class=\"ds-count\">No. <b>7</b> of 18</p><button class=\"ds-turn\" type=\"button\"><span>Next</span> &rarr;</button></div>",
+      "css": ".ds-book-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; border-top: 1px solid #DADADA; font-family: 'Supreme', system-ui, sans-serif; } .ds-turn { background: none; border: 1px solid #141414; border-radius: 3px; padding: 10px 16px; cursor: pointer; font: inherit; font-size: 15px; color: #141414; transition: background-color .2s, color .2s; } .ds-turn:hover { background: #141414; color: #fff; } .ds-turn:focus-visible { outline: 2px solid #141414; outline-offset: 4px; } .ds-count { margin: 0; font-size: 15px; color: #4A4A4A; font-variant-numeric: tabular-nums; } .ds-count b { color: #141414; font-weight: 600; }"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "refersTo": "masthead-tee",
+      "description": "Sticky white masthead at 92% with blur, hairline below, name + section links + ink tee button.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-mast-name\" href=\"#\">The Links at Norman <span>Golf &amp; Athletic Club · Norman, Oklahoma</span></a><nav class=\"ds-mast-nav\"><a href=\"#\">The course</a><a href=\"#\">The club</a><a href=\"#\">Membership</a><a href=\"#\">Visit</a><a class=\"ds-tee\" href=\"#\">Book a tee time <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a></nav></header>",
+      "css": ".ds-mast { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: 14px 24px; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid #DADADA; font-family: 'Supreme', system-ui, sans-serif; font-size: 14.5px; } .ds-mast-name { color: #141414; text-decoration: none; font-weight: 600; white-space: nowrap; } .ds-mast-name span { font-weight: 400; color: #6B6B6B; margin-left: 10px; } .ds-mast-nav { display: flex; gap: 22px; align-items: center; margin-left: auto; } .ds-mast-nav a { color: #141414; text-decoration: none; } .ds-mast-nav a:hover { text-decoration: underline; } .ds-mast-nav a:focus-visible { outline: 2px solid #141414; outline-offset: 4px; } .ds-tee { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 3px; background: #141414; color: #fff !important; font-weight: 500; } .ds-tee:hover { background: #000; text-decoration: none !important; } .ds-tee svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }"
+    },
+    {
+      "name": "Facts Line with Highlight Mark",
+      "kind": "chip",
+      "refersTo": "highlight-mark",
+      "description": "Ruled Supreme facts line; one lime mark on the par.",
+      "html": "<p class=\"ds-facts\"><span><mark class=\"ds-mark\">Par 71</mark></span><span>Black 6,519</span><span>White 5,986</span><span>Gold 5,423</span><span>Red 4,833</span><span>yards</span></p>",
+      "css": ".ds-facts { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 12px 0; margin: 0; border-top: 1px solid #DADADA; border-bottom: 1px solid #DADADA; font-family: 'Supreme', system-ui, sans-serif; font-size: 15.5px; font-variant-numeric: tabular-nums; color: #4A4A4A; } .ds-mark { background: #85C443; color: #141414; padding: 2px 6px; border-radius: 2px; font-weight: 500; }"
+    },
+    {
+      "name": "Scorecard",
+      "kind": "custom",
+      "refersTo": "scorecard-hole",
+      "description": "Holes across, Par and Yards down; hole numbers are links, the current hole is lime, totals on a grey tint.",
+      "html": "<table class=\"ds-scorecard\"><thead><tr><th class=\"ds-lab\">Hole</th><th><a href=\"#\">1</a></th><th><a href=\"#\">2</a></th><th><a href=\"#\">3</a></th><th aria-current=\"true\"><a href=\"#\">4</a></th><th><a href=\"#\">5</a></th><th class=\"ds-tot\">Out</th></tr></thead><tbody><tr><th class=\"ds-lab\">Par</th><td>4</td><td>4</td><td>4</td><td>3</td><td>5</td><td class=\"ds-tot\">35</td></tr><tr><th class=\"ds-lab\">Yards</th><td>360</td><td>381</td><td>384</td><td>122</td><td>560</td><td class=\"ds-tot\">3,129</td></tr></tbody></table>",
+      "css": ".ds-scorecard { width: 100%; border-collapse: collapse; font-family: 'Supreme', system-ui, sans-serif; font-size: 15px; font-variant-numeric: tabular-nums; color: #141414; } .ds-scorecard th, .ds-scorecard td { padding: 8px 4px; text-align: center; border-bottom: 1px solid #DADADA; } .ds-scorecard .ds-lab { text-align: left; padding-left: 0; color: #6B6B6B; font-weight: 500; font-size: 13px; width: 3.6em; } .ds-scorecard thead th { font-weight: 600; border-bottom: 1px solid #141414; } .ds-scorecard thead th a { color: #141414; text-decoration: none; display: inline-block; min-width: 2em; padding: 3px 4px; border-radius: 2px; } .ds-scorecard thead th a:hover { background: #EEF7E3; } .ds-scorecard thead th a:focus-visible { outline: 2px solid #141414; outline-offset: 4px; } .ds-scorecard thead th[aria-current=\"true\"] a { background: #85C443; } .ds-scorecard .ds-tot { font-weight: 600; background: #F6F6F6; }"
+    },
+    {
+      "name": "Page Text Column",
+      "kind": "card",
+      "refersTo": "scorecard-hole",
+      "description": "One page of the book without its plate: folio, par with yardage, the club's note.",
+      "html": "<div class=\"ds-page-text\"><p class=\"ds-folio\">No. 13</p><h3 class=\"ds-par\">Par 4<span>412 yards</span></h3><p class=\"ds-note\">Over the lake from the tee; the signature hole, and the one the members talk about.</p></div>",
+      "css": ".ds-page-text { font-family: 'Gambetta', Georgia, serif; color: #141414; max-width: 32ch; } .ds-folio { margin: 0; font-family: 'Supreme', system-ui, sans-serif; font-size: 14px; color: #6B6B6B; padding-bottom: 14px; border-bottom: 1px solid #DADADA; } .ds-par { margin: 22px 0 0; font-size: clamp(2.6rem, 1.6rem + 4vw, 5.2rem); font-weight: 400; line-height: 1; letter-spacing: -.012em; } .ds-par span { display: block; margin-top: 6px; line-height: 1.3; font-family: 'Supreme', system-ui, sans-serif; font-size: clamp(1rem, .9rem + .5vw, 1.35rem); font-weight: 400; color: #4A4A4A; font-variant-numeric: tabular-nums; } .ds-note { margin: 28px 0 0; font-size: clamp(1.25rem, 1.05rem + 1vw, 2rem); line-height: 1.35; max-width: 30ch; }"
+    },
+    {
+      "name": "Definition Rows",
+      "kind": "card",
+      "refersTo": "scorecard-hole",
+      "description": "Hairline-divided term/value rows; Supreme caption label over a Gambetta value.",
+      "html": "<dl class=\"ds-terms\"><div><dt>Family membership, monthly</dt><dd>$125 a month, plus tax, on a twelve-month contract with an automatic draft.</dd></div><div><dt>Cart plan</dt><dd>$50 a month, optional.</dd></div></dl>",
+      "css": ".ds-terms { margin: 0; font-family: 'Gambetta', Georgia, serif; color: #141414; } .ds-terms div { padding: 16px 0; border-bottom: 1px solid #DADADA; } .ds-terms dt { font-family: 'Supreme', system-ui, sans-serif; font-size: 13.5px; color: #6B6B6B; } .ds-terms dd { margin: 4px 0 0; font-size: 1.2rem; line-height: 1.35; }"
+    },
+    {
+      "name": "Included List",
+      "kind": "custom",
+      "refersTo": "highlight-mark",
+      "description": "Hairline rows with a 10px lime dot.",
+      "html": "<ul class=\"ds-includes\"><li>Unlimited golf with no green fees</li><li>Tee times four days in advance</li><li>The pools, cabana and patio</li></ul>",
+      "css": ".ds-includes { margin: 0; padding: 0; list-style: none; font-family: 'Gambetta', Georgia, serif; color: #141414; } .ds-includes li { padding: 9px 0 9px 22px; border-bottom: 1px solid #DADADA; position: relative; font-size: 1.1rem; } .ds-includes li::before { content: ''; position: absolute; left: 0; top: 19px; width: 10px; height: 10px; background: #85C443; border-radius: 50%; }"
+    },
+    {
+      "name": "Map Chips",
+      "kind": "chip",
+      "refersTo": "map-chip",
+      "description": "Square white chips with an ink border over the visit map; invert on hover.",
+      "html": "<span class=\"ds-map-links\"><a href=\"#\">Open in Google Maps</a><a href=\"#\">Apple Maps</a></span>",
+      "css": ".ds-map-links { display: flex; gap: 8px; font-family: 'Supreme', system-ui, sans-serif; } .ds-map-links a { font-size: 14px; font-weight: 500; text-decoration: none; color: #141414; background: #fff; padding: 9px 13px; border: 1px solid #141414; transition: background-color .2s, color .2s; } .ds-map-links a:hover { background: #141414; color: #fff; } .ds-map-links a:focus-visible { outline: 2px solid #141414; outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pocket Yardage Book",
+    "overview": "The page is paper. Everything on it is set the way a golf magazine would set a course feature: a white sheet, black and two greys of ink, hairline rules dividing one thing from the next, and one highlighter pen (the club's lime) that marks the par, the hole you are on, the yardages on the aerial plates and the line of play. The club's logo blue is kept for one job, hyperlinks, so a reader always knows what is clickable. There is no colour field, no tinted panel, no gradient, no shadow; the only images are the club's own photographs and the surveyed ground.\n\nThe eighteen holes are pages you turn, not a scroll. The spread is a native horizontal scroll-snap track inside two black rules, each page carrying a folio (\"No. 7\"), a huge serif par with the yardage set beneath in the sans, the club's own note at reading size, and a 260px greyscale locator at the right. The rest of the document reads downward in the same editorial measure: title, standfirst, facts line, full-bleed photograph, then section after section opened by a black rule and a two-column head (large serif heading left, grey intro right).\n\nDensity is generous. Gutters run to 96px, sections breathe at up to 120px, and headings are measured in ch. Hierarchy is carried by size and rule weight rather than by weight or colour: black rules (#141414) open sections and bracket the book; hairline rules (#DADADA) separate rows, facts, terms and table lines.",
+    "keyCharacteristics": [
+      "White page, three inks, one hairline grey; no fills except the lime highlighter and the greyed total column.",
+      "Gambetta for everything read; Supreme (tabular) for every number, folio, caption, label and control.",
+      "Two rule weights do the work of borders, cards and panels: black opens, hairline divides.",
+      "Lime is a highlighter: it sits behind or on top of information, never as a surface.",
+      "Blue appears only on hyperlinks in running text.",
+      "Pages turn horizontally; everything else reads down the sheet at a single 1280px measure."
+    ],
+    "rules": [
+      { "name": "The Highlighter Rule", "body": "Lime marks information that already exists (a par, a yardage, a current hole, a route). It never fills a surface, a card, a button or a section; if a lime shape has no number or line inside or beneath it, it is wrong.", "section": "colors" },
+      { "name": "The One Blue Rule", "body": "Logo blue appears only on hyperlinks in running text. Buttons are ink, marks are lime, nothing else is blue.", "section": "colors" },
+      { "name": "The Two Rules Rule", "body": "Structure is drawn with exactly two strokes: a 1px ink rule opens a section or brackets the book; a 1px hairline divides rows, cells and facts. No other border, box or panel exists.", "section": "colors" },
+      { "name": "The Numbers Are Sans Rule", "body": "Any string that is mostly digits (yardages, pars, prices, phone numbers, folios, dates, the counter) is set in Supreme with tabular figures. Gambetta never tabulates.", "section": "typography" },
+      { "name": "The Size Carries Hierarchy Rule", "body": "Headings move by size, not weight: 400 for the title and pars, 500 for section heads and titles, 600 only in the sans for the masthead name, plate marks and scorecard header. Bold Gambetta (700) is loaded but unused; do not reach for it.", "section": "typography" },
+      { "name": "The Italic Is the Only Emphasis Rule", "body": "Emphasis in serif is Gambetta 400 italic. No underlines outside links, no colour, no weight change.", "section": "typography" },
+      { "name": "The Flat Sheet Rule", "body": "No box-shadow on any surface, control or card. If an element needs separating from its neighbour, draw a hairline.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set every number in Supreme with font-variant-numeric: tabular-nums, including prices, phone numbers, pars, yardages and folios.",
+      "Do open a section with a 1px ink rule and a two-column head (serif heading left, Ink 2 intro right); divide everything inside with 1px hairlines.",
+      "Do keep lime as a highlighter behind or on information: \"Par 71\", the current hole, yardage tabs, the line of play, the locator route, list dots, the pin.",
+      "Do keep the type ramp fluid with clamp() and cap measures in ch (12ch title, 22ch pull, 30ch note, 46–54ch running text).",
+      "Do use the 3px / 2px / 50% radius set and nothing in between; map chips stay fully square.",
+      "Do invert on hover (ink-on-white to white-on-ink) for any bordered control; deepen to #000 for filled ones.",
+      "Do honour prefers-reduced-motion: no transitions, instant page turns, no smooth document scroll.",
+      "Do show aerial ground in greyscale wherever it is a locator or map, so the lime route reads."
+    ],
+    "donts": [
+      "Don't fill a surface, card, band or section with lime, blue, or any colour; the sheet is white and the only grey fill is the scorecard total column.",
+      "Don't use logo blue for anything but hyperlinks in running text.",
+      "Don't add box-shadows, tinted panels or borders heavier than 1px; separation is a hairline.",
+      "Don't bold Gambetta or colour it for emphasis; use Gambetta 400 italic.",
+      "Don't set Gambetta below 18px; small text drops to Supreme (15.5 → 13 px).",
+      "Don't replace the horizontal paged spread with a vertical stack of holes, or add the stat-band / card-grid pattern the build refuses.",
+      "Don't introduce glyph or icon fonts; the only icons are the two inline stroked arrows at 12–14px.",
+      "Don't invent hours, fees or reviews to fill a facts line; the facts line holds par and the four tee yardages only."
+    ]
+  }
+}

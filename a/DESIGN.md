@@ -139,7 +139,7 @@ components:
 
 **Creative North Star: "The Card and the Ground"**
 
-The page has one product, a family membership card, and one proof, the real course. Everything in the system serves those two objects. The club's own logo colours are the whole palette: logo blue is the field the card and header sit on, lime is reserved for the thing you press and the thing that is selected, and white paper carries the reading. Nothing is drawn to stand in for the course; the course is shown as surveyed, every hole an aerial plate at one ground scale, with the yardage line and 100-yard marks drawn onto the photograph in lime. This is a club site that looks like the club's own card and its own land, not like a template with the club's name dropped in.
+The page has one product, a family membership card, and one proof, the real course. Everything in the system serves those two objects. The club's own logo colours are the whole palette: logo blue is the field the card and header sit on, lime is reserved for the thing you press and the thing that is selected, and white paper carries the reading. Nothing is drawn to stand in for the course; the course is shown as surveyed, every hole an aerial plate at one ground scale, with the line of play and the 100-yard marks drawn onto the photograph in white and ink, so the annotation reads as a surveyor's mark rather than a brand colour. This is a club site that looks like the club's own card and its own land, not like a template with the club's name dropped in.
 
 Density is editorial and unhurried: generous section padding, big Boska headlines that drop to a tight 0.98 line-height, and Switzer body at 17px with a comfortable 1.55 measure. Hierarchy is carried by size and weight contrast in the display face (700 for headlines, 900 for numerals and the price), never by small uppercase labels. The build contains no `text-transform`, no eyebrows, no stat band, no icon grid.
 
@@ -148,7 +148,7 @@ The build rejects the hero → slogan → number band → card grid template. It
 **Key Characteristics:**
 - Two-colour brand palette (logo blue, logo lime) plus white paper and a blue-tinted course ground; nothing else is introduced.
 - Boska display at 700/900 against Switzer text; the 900 weight is for numbers (hole No., price, tag numerals) and the one emphasised phrase.
-- Real aerial plates as a component family: one ground scale, tee-down, with lime yardage marks drawn in SVG over the photo.
+- Real aerial plates as a component family: one ground scale, tee-down, with the line of play and yardage drawn in white-and-ink SVG over the photo; lime never touches the plate itself.
 - Pills for every action; soft radii (4/6/8/14) for images, panels and the card.
 - Depth only on objects that are physically "on" the page: the card (plastic), the hole panel, the map chips. Everything else is flat tonal layering.
 - Motion is one easing curve (`cubic-bezier(.2,.8,.2,1)`), used for the card turn, tag rise and button lift, and fully disabled under `prefers-reduced-motion`.
@@ -163,7 +163,7 @@ The palette is the club's logo, extended only by what legibility on blue and on 
 - **Scrim Blue** (`scrim-blue`): The hero's base and the colour of its gradient scrims (left-to-right 0.94 → 0.08 alpha; bottom fade 0 → 0.9). Only ever seen through alpha over the aerial plate.
 
 ### Secondary
-- **Logo Lime** (`lime`): The action colour and the selection colour. The Book / Call button, the selected tag's 3px outline, the focus ring, text selection, the nav hover underline, the card-back bullets, and every drawn mark on the survey (yardage line, 100-yard ticks, tee dot, green ring, locator route). Lime never fills a surface larger than a button.
+- **Logo Lime** (`lime`): The action colour and the selection colour. The Book / Call button, the selected tag's 3px outline, the focus ring, text selection, the nav hover underline, the card's turn glyph and card-back bullets, map chip hover, and the locator route on the course inset. Lime never fills a surface larger than a button and never appears on the aerial plates' own annotations.
 - **Lime Hover** (`lime-hover`): The lime button's hover only.
 
 ### Neutral
@@ -176,7 +176,9 @@ The palette is the club's logo, extended only by what legibility on blue and on 
 - **On-Blue 2** (`on-blue-2`): Secondary text on any blue surface (hero sub, card alt line, membership lead, terms keys, fine print), ≥4.7:1. On blue, hairlines are `rgba(255,255,255,.28–.3)` rather than Rule.
 
 ### Named Rules
-**The Press-or-Selected Rule.** Lime marks what you can press and what is currently chosen (plus the survey's own drawn marks). It is never a background, never a heading colour, never decoration.
+**The Press-or-Selected Rule.** Lime marks what you can press and what is currently chosen. It is never a background, never a heading colour, never decoration.
+
+**The White-and-Ink Annotation Rule.** Marks drawn on an aerial plate (line of play, 100-yard ticks, yardage chips, tee and green) are white and Ink only: white dashes over a translucent Ink halo, white chips with a faint Ink stroke and Ink text. Brand colour stays off the survey; the one exception is the locator inset's route, which is lime because it is the selection, not an annotation.
 
 **The Two-Blue Rule.** Surfaces are Logo Blue or Field Blue; Scrim Blue exists only as alpha over a photograph. Do not introduce a fourth blue.
 
@@ -252,7 +254,7 @@ A `<button>` at credit-card proportions (aspect 1.586, max 420px), resting at �
 A link holding one aerial plate (`width: var(--tagw)`, 4px top radius, flush bottom) over a foot row: Boska 900 24px numeral and a 13px Ink 3 "Par 4 · 360". Hover lifts 4px and brightens the plate 8%. Selected (`aria-current="true"`): 3px lime outline on the plate, numeral turns Logo Blue, the par line turns Ink at 600. Tags rise 24px from the baseline when the skyline scrolls into view, staggered 35ms each.
 
 ### Hole Panel (signature)
-White, 8px, panel-lift shadow, `clamp(20px, 3vw, 40px)` padding. Left: the plate, sized by height (`min(640px, 76vh)`) so every hole shares one scale, with an SVG overlay: white 11px halo under a lime 5px dotted (2 16) line, white 100-yard ticks with lime-boxed Switzer 600 yardage labels, lime tee dot and lime-ringed green. Centre: hole No. in Boska 900 Logo Blue, par line, note in Ink 2. Right (300px): a desaturated course locator (`saturate(.55) brightness(.92)`) with the hole's route as a 34px lime polyline with a drop shadow, captioned in 13px Ink 3. Bottom: prev/next links (Switzer 600, 16px stroke arrows) above a `rule` hairline. Default hole is 13; without JS the panel for No. 1 shows.
+White, 8px, panel-lift shadow, `clamp(20px, 3vw, 40px)` padding. Left: the plate, sized by height (`min(640px, 76vh)`) so every hole shares one scale, with an SVG overlay in plate units: a 5px white dashed (2 16) line of play over an 11px `rgba(14,27,38,.55)` halo, 6px white 100-yard ticks, yardage chips as white rects with a 2px `rgba(14,27,38,.35)` stroke and Switzer 600 44px Ink text, a white tee mark with a 5px Ink ring and an Ink green mark with a 6px white ring. Centre: hole No. in Boska 900 Logo Blue, par line, note in Ink 2. Right (300px): a desaturated course locator (`saturate(.55) brightness(.92)`) with the hole's route as a 34px lime polyline with a drop shadow, captioned in 13px Ink 3. Bottom: prev/next links (Switzer 600, 16px stroke arrows) above a `rule` hairline. Default hole is 13; without JS the panel for No. 1 shows.
 
 ### Blue Field (membership)
 Field Blue section, white text, headline capped at 16ch with the price phrase in Boska 900. Terms are a three-up definition list over a white-30% rule; the covers list runs in two columns with 8×1.5px On-Blue 2 dash bullets. Actions: lime Call, ghost email. Fine print 14px On-Blue 2 at 78ch.
@@ -273,7 +275,7 @@ Ink ground, 14px/1.6 text in `#B9C8D6` with sources in `#8EA2B4` and white links
 - **Do** put every surface on Logo Blue, Field Blue, Paper or Course Tint, and reach for lime only when something is pressable or selected (The Press-or-Selected Rule).
 - **Do** set headlines in Boska 700 and numbers in Boska 900; use size and weight for hierarchy, sentence case throughout (The Weight-Not-Case Rule).
 - **Do** keep buttons as pills (999px, 15px 22px, Switzer 600 16px) with one lime action and an outline or blue alternative per surface.
-- **Do** show the course as the real aerial at one ground scale, with any routing or yardage drawn in lime SVG over the photograph, and keep the provenance line in the footer.
+- **Do** show the course as the real aerial at one ground scale, with any line of play or yardage drawn in white-and-ink SVG over the photograph (The White-and-Ink Annotation Rule), and keep the provenance line in the footer.
 - **Do** use `rule` (#D8E1EA) hairlines on white and white at 28–30% alpha on blue (The Alpha Hairline Rule).
 - **Do** use the house ease `cubic-bezier(.2,.8,.2,1)` for transforms, and switch every transition off under `prefers-reduced-motion`.
 
@@ -282,5 +284,5 @@ Ink ground, 14px/1.6 text in `#B9C8D6` with sources in `#8EA2B4` and white links
 - **Don't** introduce a fourth blue, a grey background, or any accent beyond the logo's lime (The Two-Blue Rule).
 - **Don't** put shadows on text blocks, sections or photographs; only the card, the hole panel and chips on the map sit on top of the page (The On-Top Rule).
 - **Don't** draw the course or its holes as illustration, icons or abstract shapes; the aerial plate is the component.
-- **Don't** fill a surface with lime or use it as a heading colour.
+- **Don't** fill a surface with lime, use it as a heading colour, or draw it onto an aerial plate's annotations.
 - **Don't** use a third typeface or a system display face in place of Boska.
