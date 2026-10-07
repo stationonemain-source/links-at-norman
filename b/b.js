@@ -13,16 +13,17 @@
     n = Math.max(1, Math.min(18, n));
     track.scrollTo({ left: pages[n - 1].offsetLeft, behavior: smooth && !reduced ? 'smooth' : 'instant' });
   }
-  function mark(n) {
-    if (n === current) return;
+  let touched = false;
+  function mark(n, { hash = true } = {}) {
+    if (n === current && touched) return;
     current = n; count.textContent = n;
     rows.forEach((r) => { const a = $('a', r); if (!a) return; if (+a.dataset.n === n) r.setAttribute('aria-current', 'true'); else r.removeAttribute('aria-current'); });
-    history.replaceState(null, '', '#p' + n);
+    if (hash && touched) history.replaceState(null, '', '#page-' + n);
   }
   /* which page is open: read it off the scroll position, settled */
   let t;
   const sync = () => mark(Math.max(1, Math.min(18, Math.round(track.scrollLeft / track.clientWidth) + 1)));
-  track.addEventListener('scroll', () => { clearTimeout(t); t = setTimeout(sync, 90); }, { passive: true });
+  track.addEventListener('scroll', () => { touched = true; clearTimeout(t); t = setTimeout(sync, 90); }, { passive: true });
 
   $('#prev').addEventListener('click', () => goTo(current - 1));
   $('#next').addEventListener('click', () => goTo(current + 1));
@@ -38,7 +39,7 @@
     $('#book').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
   });
 
-  const fromHash = /^#p(\d{1,2})$/.exec(location.hash);
+  const fromHash = /^#page-(\d{1,2})$/.exec(location.hash);
   const start = fromHash ? +fromHash[1] : 1;
-  goTo(start, { smooth: false }); mark(start);
+  goTo(start, { smooth: false }); mark(start, { hash: false });
 })();

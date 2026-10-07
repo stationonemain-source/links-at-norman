@@ -27,12 +27,12 @@
   const holes = $$('.hole'), tags = $$('.tag');
   tags.forEach((t, i) => t.style.setProperty('--i', i % 9));
   let current = 0;
-  function show(n, { scroll = false } = {}) {
+  function show(n, { scroll = false, hash = true } = {}) {
     n = ((n - 1 + 18) % 18) + 1;
     current = n;
     holes.forEach((h) => h.classList.toggle('active', +h.dataset.n === n));
     tags.forEach((t) => { if (+t.dataset.n === n) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
-    history.replaceState(null, '', '#h' + n);
+    if (hash) history.replaceState(null, '', '#hole-' + n);
     if (scroll && matchMedia('(max-width: 900px)').matches) {
       $('#holes').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
     }
@@ -48,8 +48,8 @@
     if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); tags[current - 1].focus({ preventScroll: true }); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); tags[current - 1].focus({ preventScroll: true }); }
   });
-  const fromHash = /^#h(\d{1,2})$/.exec(location.hash);
-  show(fromHash ? +fromHash[1] : 13);
+  const fromHash = /^#hole-(\d{1,2})$/.exec(location.hash);
+  show(fromHash ? +fromHash[1] : 13, { hash: false });
 
   /* the skyline rises once, when it comes into view */
   const sky = $('#skyline');

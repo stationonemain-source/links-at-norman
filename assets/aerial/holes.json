@@ -1,6 +1,6 @@
 {
- "source": "USGS The National Map, NAIP Plus orthoimagery (public domain); hole routing (c) OpenStreetMap contributors",
- "scale_m_per_px": 0.32,
+ "source": "City of Norman 2019 orthophotography (3-inch) with USGS NAIP 2021 colour, rendered as late spring with Higgsfield (Nano Banana Pro); hole routing (c) OpenStreetMap contributors",
+ "scale_m_per_px": 0.2,
  "holes": [
   {
    "n": 1,
@@ -8,50 +8,50 @@
    "yds": 360,
    "note": "A straight-away par 4 and a very good opener. Mounds along the fairway funnel the ball back to the short grass.",
    "plate": "assets/aerial/hole-01.jpg",
-   "w": 531,
-   "h": 1202,
+   "w": 850,
+   "h": 1923,
    "line": [
     [
-     265.5,
-     1121.5
+     425.0,
+     1795.5
     ],
     [
-     230.9,
-     714.6
+     369.6,
+     1144.5
     ],
     [
-     227.8,
-     503.1
+     364.6,
+     806.2
     ],
     [
-     250.1,
-     242.8
+     400.4,
+     389.7
     ],
     [
-     265.5,
-     142.0
+     425.0,
+     228.4
     ]
    ],
    "map": [
     [
-     1255.2,
-     1009.8
+     2095.6,
+     1685.2
     ],
     [
-     1581.5,
-     992.5
+     2640.3,
+     1656.3
     ],
     [
-     1750.6,
-     995.4
+     2922.6,
+     1661.1
     ],
     [
-     1958.2,
-     1019.9
+     3269.2,
+     1702.0
     ],
     [
-     2038.4,
-     1034.8
+     3403.1,
+     1726.9
     ]
    ],
    "bearing": 91.8
@@ -62,50 +62,50 @@
    "yds": 381,
    "note": "Dogleg right to a small green with water around it and a bunker guarding the front.",
    "plate": "assets/aerial/hole-02.jpg",
-   "w": 531,
-   "h": 1182,
+   "w": 850,
+   "h": 1892,
    "line": [
     [
-     265.5,
-     1100.1
+     425.0,
+     1760.0
     ],
     [
-     264.8,
-     793.1
+     423.9,
+     1268.7
     ],
     [
-     237.0,
-     560.1
+     379.4,
+     895.7
     ],
     [
-     213.0,
-     451.0
+     341.0,
+     721.1
     ],
     [
-     265.5,
-     145.4
+     425.0,
+     232.0
     ]
    ],
    "map": [
     [
-     2098.7,
-     929.8
+     3503.8,
+     1551.7
     ],
     [
-     1859.8,
-     872.9
+     3104.9,
+     1456.7
     ],
     [
-     1673.3,
-     850.8
+     2793.6,
+     1419.9
     ],
     [
-     1584.0,
-     849.1
+     2644.5,
+     1417.0
     ],
     [
-     1356.1,
-     751.0
+     2264.0,
+     1253.3
     ]
    ],
    "bearing": 283.5
@@ -116,42 +116,42 @@
    "yds": 384,
    "note": "Dogleg left. The drive has to land between the lake and a cedar grove.",
    "plate": "assets/aerial/hole-03.jpg",
-   "w": 531,
-   "h": 1247,
+   "w": 850,
+   "h": 1996,
    "line": [
     [
-     265.5,
-     1160.9
+     425.5,
+     1857.3
     ],
     [
-     322.7,
-     860.3
+     517.0,
+     1376.4
     ],
     [
-     347.9,
-     480.0
+     557.3,
+     767.9
     ],
     [
-     265.5,
-     148.6
+     425.5,
+     237.7
     ]
    ],
    "map": [
     [
-     1193.1,
-     867.1
+     1991.9,
+     1447.1
     ],
     [
-     975.1,
-     756.0
+     1627.9,
+     1261.7
     ],
     [
-     688.7,
-     651.7
+     1149.7,
+     1087.6
     ],
     [
-     415.8,
-     640.9
+     694.1,
+     1069.5
     ]
    ],
    "bearing": 286.2
@@ -162,26 +162,26 @@
    "yds": 122,
    "note": "A short par 3 into a grove of trees. Sand and cedars guard the green, so it has to be accurate.",
    "plate": "assets/aerial/hole-04.jpg",
-   "w": 531,
-   "h": 577,
+   "w": 850,
+   "h": 924,
    "line": [
     [
-     266.0,
-     498.6
+     424.5,
+     799.3
     ],
     [
-     266.0,
-     139.9
+     424.5,
+     225.7
     ]
    ],
    "map": [
     [
-     205.1,
-     658.8
+     342.4,
+     1099.4
     ],
     [
-     205.9,
-     372.0
+     343.7,
+     620.7
     ]
    ],
    "bearing": 0.2
@@ -192,34 +192,34 @@
    "yds": 560,
    "note": "A straight-away par 5 with two lakes to negotiate on the way to the green.",
    "plate": "assets/aerial/hole-05.jpg",
-   "w": 531,
-   "h": 1723,
+   "w": 850,
+   "h": 2757,
    "line": [
     [
-     265.0,
-     1643.9
+     425.5,
+     2631.3
     ],
     [
-     289.1,
-     616.3
+     464.0,
+     986.8
     ],
     [
-     265.0,
-     140.6
+     425.5,
+     225.7
     ]
    ],
    "map": [
     [
-     740.6,
-     220.7
+     1236.5,
+     368.3
     ],
     [
-     1559.4,
-     296.3
+     2603.3,
+     494.4
     ],
     [
-     1940.3,
-     303.1
+     3239.2,
+     505.9
     ]
    ],
    "bearing": 93.9
@@ -230,34 +230,34 @@
    "yds": 342,
    "note": "Dogleg left. The tee shot threads the cedars to reach the landing area; the green is tucked into the trees.",
    "plate": "assets/aerial/hole-06.jpg",
-   "w": 531,
-   "h": 1037,
+   "w": 850,
+   "h": 1658,
    "line": [
     [
-     266.0,
-     939.7
+     424.5,
+     1503.0
     ],
     [
-     372.8,
-     354.0
+     595.4,
+     566.1
     ],
     [
-     266.0,
-     158.8
+     424.5,
+     254.0
     ]
    ],
    "map": [
     [
-     2032.7,
-     209.9
+     3393.5,
+     350.3
     ],
     [
-     1957.5,
-     680.3
+     3268.0,
+     1135.3
     ],
     [
-     2046.3,
-     834.5
+     3416.3,
+     1392.7
     ]
    ],
    "bearing": 178.7
@@ -268,34 +268,34 @@
    "yds": 442,
    "note": "The longest par 4 on the course: wide open, a huge landing area and a generous green.",
    "plate": "assets/aerial/hole-07.jpg",
-   "w": 531,
-   "h": 1346,
+   "w": 850,
+   "h": 2154,
    "line": [
     [
-     265.0,
-     1265.3
+     424.5,
+     2024.3
     ],
     [
-     313.0,
-     464.2
+     501.3,
+     742.4
     ],
     [
-     265.0,
-     143.2
+     424.5,
+     228.7
     ]
    ],
    "map": [
     [
-     2059.8,
-     1167.5
+     3438.8,
+     1948.4
     ],
     [
-     1999.2,
-     1806.9
+     3337.6,
+     3015.4
     ],
     [
-     2028.6,
-     2065.0
+     3386.7,
+     3446.1
     ]
    ],
    "bearing": 182.0
@@ -306,26 +306,26 @@
    "yds": 174,
    "note": "The most scenic hole on the course. The trees behind the green give it its character.",
    "plate": "assets/aerial/hole-08.jpg",
-   "w": 531,
-   "h": 621,
+   "w": 850,
+   "h": 993,
    "line": [
     [
-     266.0,
-     542.2
+     424.5,
+     868.1
     ],
     [
-     266.0,
-     140.3
+     424.5,
+     224.9
     ]
    ],
    "map": [
     [
-     1896.7,
-     1525.4
+     3166.5,
+     2545.7
     ],
     [
-     1945.5,
-     1207.6
+     3248.1,
+     2015.2
     ]
    ],
    "bearing": 8.7
@@ -336,34 +336,34 @@
    "yds": 364,
    "note": "A birdie hole to finish the front nine and carry some momentum to the back.",
    "plate": "assets/aerial/hole-09.jpg",
-   "w": 531,
-   "h": 1159,
+   "w": 850,
+   "h": 1854,
    "line": [
     [
-     265.0,
-     1080.0
+     425.0,
+     1728.8
     ],
     [
-     283.4,
-     628.1
+     454.4,
+     1005.6
     ],
     [
-     265.0,
-     140.5
+     425.0,
+     225.3
     ]
    ],
    "map": [
     [
-     2059.8,
-     947.5
+     3438.7,
+     1581.3
     ],
     [
-     1699.2,
-     918.1
+     2836.8,
+     1532.1
     ],
     [
-     1308.9,
-     916.9
+     2185.1,
+     1530.1
     ]
    ],
    "bearing": 272.3
@@ -374,26 +374,26 @@
    "yds": 343,
    "note": "A straight-away, open hole with bunkers guarding the front of the green.",
    "plate": "assets/aerial/hole-10.jpg",
-   "w": 531,
-   "h": 1045,
+   "w": 850,
+   "h": 1672,
    "line": [
     [
-     265.5,
-     966.7
+     424.5,
+     1547.3
     ],
     [
-     265.5,
-     140.8
+     424.5,
+     225.6
     ]
    ],
    "map": [
     [
-     923.0,
-     972.9
+     1540.9,
+     1623.6
     ],
     [
-     263.8,
-     1020.7
+     440.5,
+     1703.5
     ]
    ],
    "bearing": 265.8
@@ -404,26 +404,26 @@
    "yds": 408,
    "note": "Open and straight, with bunkers in front of the green again. Take one more club.",
    "plate": "assets/aerial/hole-11.jpg",
-   "w": 531,
-   "h": 1292,
+   "w": 850,
+   "h": 2067,
    "line": [
     [
-     266.0,
-     1213.9
+     424.5,
+     1942.2
     ],
     [
-     266.0,
-     140.6
+     424.5,
+     224.8
     ]
    ],
    "map": [
     [
-     170.2,
-     803.1
+     284.2,
+     1340.2
     ],
     [
-     230.4,
-     1659.8
+     384.7,
+     2770.0
     ]
    ],
    "bearing": 176.0
@@ -434,34 +434,34 @@
    "yds": 202,
    "note": "A par 3 over water to a green backed by a grove of trees.",
    "plate": "assets/aerial/hole-12.jpg",
-   "w": 531,
-   "h": 783,
+   "w": 850,
+   "h": 1252,
    "line": [
     [
-     265.5,
-     696.6
+     425.5,
+     1113.6
     ],
     [
-     209.9,
-     265.4
+     336.5,
+     423.7
     ],
     [
-     265.5,
-     148.9
+     425.5,
+     237.4
     ]
    ],
    "map": [
     [
-     709.5,
-     1612.0
+     1184.5,
+     2690.2
     ],
     [
-     813.6,
-     1280.1
+     1358.3,
+     2136.4
     ],
     [
-     893.1,
-     1214.2
+     1490.9,
+     2026.4
     ]
    ],
    "bearing": 24.8
@@ -472,34 +472,34 @@
    "yds": 412,
    "note": "The signature hole. It wraps around the 12-acre lake, and the view is the one you remember.",
    "plate": "assets/aerial/hole-13.jpg",
-   "w": 531,
-   "h": 1264,
+   "w": 850,
+   "h": 2023,
    "line": [
     [
-     265.0,
-     1087.4
+     425.0,
+     1740.9
     ],
     [
-     553.1,
-     490.5
+     886.1,
+     785.6
     ],
     [
-     265.0,
-     239.1
+     425.0,
+     383.1
     ]
    ],
    "map": [
     [
-     1304.4,
-     1207.9
+     2177.6,
+     2015.9
     ],
     [
-     1237.5,
-     1734.1
+     2065.9,
+     2894.0
     ],
     [
-     1520.0,
-     1851.7
+     2537.5,
+     3090.2
     ]
    ],
    "bearing": 161.5
@@ -510,34 +510,34 @@
    "yds": 379,
    "note": "A long par 4 to a green with a huge mound behind it.",
    "plate": "assets/aerial/hole-14.jpg",
-   "w": 531,
-   "h": 1223,
+   "w": 850,
+   "h": 1957,
    "line": [
     [
-     265.5,
-     1143.0
+     425.5,
+     1828.5
     ],
     [
-     307.6,
-     444.4
+     492.9,
+     711.3
     ],
     [
-     265.5,
-     142.5
+     425.5,
+     228.5
     ]
    ],
    "map": [
     [
-     1525.0,
-     1925.7
+     2546.0,
+     3213.7
     ],
     [
-     965.8,
-     1948.2
+     1612.5,
+     3251.2
     ],
     [
-     729.0,
-     2005.9
+     1217.0,
+     3347.5
     ]
    ],
    "bearing": 264.2
@@ -548,34 +548,34 @@
    "yds": 598,
    "note": "The longest hole on the course: a dogleg left around the lake. There is no room to go for it in two.",
    "plate": "assets/aerial/hole-15.jpg",
-   "w": 531,
-   "h": 1878,
+   "w": 850,
+   "h": 3004,
    "line": [
     [
-     265.0,
-     1646.5
+     425.0,
+     2634.3
     ],
     [
-     614.8,
-     402.5
+     984.9,
+     643.4
     ],
     [
-     265.0,
-     294.0
+     425.0,
+     469.7
     ]
    ],
    "map": [
     [
-     680.1,
-     2097.7
+     1135.4,
+     3500.7
     ],
     [
-     1709.8,
-     2005.8
+     2854.5,
+     3347.3
     ],
     [
-     1691.5,
-     1713.2
+     2824.0,
+     2859.1
     ]
    ],
    "bearing": 69.2
@@ -586,26 +586,26 @@
    "yds": 177,
    "note": "A great par 3. Par is all you want here, then move on.",
    "plate": "assets/aerial/hole-16.jpg",
-   "w": 531,
-   "h": 678,
+   "w": 850,
+   "h": 1086,
    "line": [
     [
-     265.5,
-     599.7
+     424.5,
+     960.4
     ],
     [
-     265.5,
-     139.8
+     424.5,
+     224.6
     ]
    ],
    "map": [
     [
-     1759.4,
-     1715.7
+     2937.4,
+     2863.2
     ],
     [
-     1853.9,
-     2071.2
+     3095.0,
+     3456.5
     ]
    ],
    "bearing": 165.1
@@ -616,42 +616,42 @@
    "yds": 503,
    "note": "The last par 5. Reachable for the long hitters, but the closing hole is waiting.",
    "plate": "assets/aerial/hole-17.jpg",
-   "w": 531,
-   "h": 1393,
+   "w": 850,
+   "h": 2229,
    "line": [
     [
-     265.0,
-     1255.1
+     425.5,
+     2007.4
     ],
     [
-     178.9,
-     709.5
+     287.7,
+     1134.4
     ],
     [
-     62.8,
-     370.5
+     102.1,
+     592.1
     ],
     [
-     265.0,
-     201.4
+     425.5,
+     321.6
     ]
    ],
    "map": [
     [
-     1933.4,
-     2041.1
+     3227.7,
+     3406.2
     ],
     [
-     1809.3,
-     1616.9
+     3020.6,
+     2698.4
     ],
     [
-     1682.7,
-     1359.8
+     2809.2,
+     2269.3
     ],
     [
-     1825.7,
-     1205.0
+     3048.0,
+     2010.9
     ]
    ],
    "bearing": 352.7
@@ -662,47 +662,47 @@
    "yds": 368,
    "note": "Trees down the left and the clubhouse in view behind the green. A great finishing hole.",
    "plate": "assets/aerial/hole-18.jpg",
-   "w": 531,
-   "h": 1142,
+   "w": 850,
+   "h": 1827,
    "line": [
     [
-     265.0,
-     1063.6
+     424.5,
+     1702.0
     ],
     [
-     268.6,
-     479.7
+     430.3,
+     767.4
     ],
     [
-     265.0,
-     140.9
+     424.5,
+     225.0
     ]
    ],
    "map": [
     [
-     2035.4,
-     1108.9
+     3398.1,
+     1850.6
     ],
     [
-     1568.3,
-     1101.0
+     2618.3,
+     1837.4
     ],
     [
-     1297.2,
-     1101.0
+     2165.7,
+     1837.4
     ]
    ],
    "bearing": 270.6
   }
  ],
  "course": {
-  "w": 2251,
-  "h": 2301
+  "w": 3758,
+  "h": 3840
  },
  "clubhouse": {
   "map": [
-   1192.1,
-   1104.2
+   1990.2,
+   1842.8
   ],
   "pct": [
    53.0,

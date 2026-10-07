@@ -51,12 +51,18 @@ not allowed), soft spikes, collared shirts. Part of the Lindsey Golf network (Go
 
 - Name: The Links at Norman (Golf & Athletic Club). Logo: tall condensed blue serif "THE LINKS"
   with a lime flag — `assets/logo.png`; logo blue #006BB3, lime #85C443.
-- Typeface direction pinned by Circle: build TWO versions — (A) a condensed display serif echoing
-  the logo (Zodiak) + Switzer; (B) golf-magazine editorial (Gambetta) + a neutral sans.
+- Typeface direction pinned by Circle: build TWO versions — (A) a display serif echoing the
+  logo + Switzer: Zodiak was named, Boska shipped because it matches the wordmark (rendered test
+  2026-10-07); (B) golf-magazine editorial: Gambetta + Supreme.
 - Circle's standing rules: no stock "slop" fonts; no code-drawn illustrations standing in for the
   real thing; no slogan-headline + big-number-band + card-grid template feel; scroll films short.
 
 ## Evidence on Hand
+
+- From linksatnormangolf.com (pulled 2026-10-07): /amenities lists the activity room with billiards,
+  tanning beds, whirlpool & sauna; /contact lists the leasing office (405) 321-3430 beside the pro shop;
+  /rules-regulations gives collared shirts, soft spikes, carts required (no walking), cart drivers 16+,
+  the 90-degree rule, and golfers under 14 with an adult. These are the club's own published facts.
 
 - Club photos (their own site): `assets/photos/` — one course photo (sunset hero), pro shop,
   merch wall, Grill, cardio room, weight room, whirlpool, pool, clubhouse exterior.
