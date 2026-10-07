@@ -5,7 +5,7 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const track = $('#pages'), pages = $$('.page', track), count = $('#count');
-  const rows = $$('.scorecard tbody tr');
+  const cells = $$('.scorecard thead th a[data-n]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let current = 1;
 
@@ -17,7 +17,7 @@
   function mark(n, { hash = true } = {}) {
     if (n === current && touched) return;
     current = n; count.textContent = n;
-    rows.forEach((r) => { const a = $('a', r); if (!a) return; if (+a.dataset.n === n) r.setAttribute('aria-current', 'true'); else r.removeAttribute('aria-current'); });
+    cells.forEach((a) => { const th = a.parentElement; if (+a.dataset.n === n) th.setAttribute('aria-current', 'true'); else th.removeAttribute('aria-current'); });
     if (hash && touched) history.replaceState(null, '', '#page-' + n);
   }
   /* which page is open: read it off the scroll position, settled */

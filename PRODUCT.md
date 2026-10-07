@@ -54,6 +54,9 @@ not allowed), soft spikes, collared shirts. Part of the Lindsey Golf network (Go
 - Typeface direction pinned by Circle: build TWO versions — (A) a display serif echoing the
   logo + Switzer: Zodiak was named, Boska shipped because it matches the wordmark (rendered test
   2026-10-07); (B) golf-magazine editorial: Gambetta + Supreme.
+- Circle (2026-10-07) explicitly approved an AI spring re-render of the crisp winter survey:
+  "make the winter imagery to spring like you can use AI to change it and still be crisp." The page
+  discloses it (course copy "re-coloured for spring", footer attribution naming Higgsfield).
 - Circle's standing rules: no stock "slop" fonts; no code-drawn illustrations standing in for the
   real thing; no slogan-headline + big-number-band + card-grid template feel; scroll films short.
 
