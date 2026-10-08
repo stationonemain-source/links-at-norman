@@ -17,7 +17,7 @@ deployment; Circle did not ask for a framework.
 1. **Norman-area families and golfers deciding whether to join** — comparing what $125 a month
    buys (golf, pools, gym, Grill) against paying green fees elsewhere. Mostly on phones.
 2. **Golfers who want to play this week** — they need the tee sheet in one tap.
-3. **The club's GM (Chris Johnston) seeing a spec pitch from Station** — he judges whether this
+3. **The club's Pro Shop Manager (Chris Johnston, per her business card, 2026-10-08) seeing a spec pitch from Station** — she judges whether this
    looks like *his* club and better than his Wix site.
 
 ## Product Purpose
