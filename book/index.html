@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a tee time · The Links at Norman</title>
+<meta name="description" content="Pick a day, pick a time on the sun, pay now or at the pro shop. The Links at Norman tee sheet.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#006BB3">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+<link rel="preload" href="../assets/fonts/boska-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/switzer-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="book.css">
+</head>
+<body>
+<a class="skip" href="#sheet">Skip to the tee sheet</a>
+
+<header class="top">
+ <a class="brand" href="../a/" aria-label="The Links at Norman — home">
+  <img src="../assets/logo-white.png" alt="The Links, Golf &amp; Athletic Club" width="640" height="488">
+ </a>
+ <p class="top-title">Tee times</p>
+ <a class="top-call" href="tel:+14053296549">Pro shop <span>405-329-6549</span></a>
+</header>
+
+<main class="book" id="main">
+
+ <!-- ---------- step 1 · the day ---------- -->
+ <section class="days" aria-labelledby="days-h">
+  <h1 id="days-h" class="vh">Choose a day</h1>
+  <div class="days-rail" id="days" role="radiogroup" aria-label="Day"></div>
+ </section>
+
+ <!-- ---------- step 2 · the time, on the sun ---------- -->
+ <section class="sheet" id="sheet" aria-labelledby="sheet-h">
+  <h2 id="sheet-h" class="vh">Choose a tee time</h2>
+
+  <div class="pick" aria-live="polite">
+   <p class="pick-day" id="pick-day">Saturday 11 October</p>
+   <p class="pick-time"><span class="numeral" id="pick-time">—</span><span class="ampm" id="pick-ampm"></span></p>
+   <p class="pick-meta" id="pick-meta">Choose a time on the sun below.</p>
+  </div>
+
+  <div class="sun" id="sun">
+   <div class="sun-sky" id="sky" aria-hidden="true"></div>
+   <div class="sun-track" id="track" role="radiogroup" aria-label="Tee times"></div>
+   <div class="sun-axis" id="axis" aria-hidden="true"></div>
+  </div>
+  <p class="sun-note" id="sun-note"></p>
+ </section>
+
+ <!-- ---------- step 3 · players ---------- -->
+ <section class="party" aria-labelledby="party-h">
+  <h2 id="party-h" class="section-h">Players</h2>
+  <div class="party-row" role="radiogroup" aria-label="Number of players" id="party">
+   <button type="button" role="radio" aria-checked="false" data-n="1">1</button>
+   <button type="button" role="radio" aria-checked="false" data-n="2">2</button>
+   <button type="button" role="radio" aria-checked="false" data-n="3">3</button>
+   <button type="button" role="radio" aria-checked="true" data-n="4">4</button>
+  </div>
+  <p class="party-note">Cart included. Walking isn't permitted at the Links.</p>
+  <label class="fill" id="fill-wrap" hidden>
+   <input type="checkbox" id="fill">
+   <span class="fill-box" aria-hidden="true"></span>
+   <span>Open the empty seat to Links singles. <em>We text you when someone joins.</em></span>
+  </label>
+ </section>
+
+ <!-- ---------- the card: your tee time + pay ---------- -->
+ <aside class="card" id="card" aria-labelledby="card-h">
+  <div class="card-face">
+   <img class="card-logo" src="../assets/logo-white.png" alt="" width="640" height="488">
+   <h2 id="card-h" class="card-title">Your tee time</h2>
+   <dl class="card-rows">
+    <div><dt>Day</dt><dd id="c-day">—</dd></div>
+    <div><dt>Time</dt><dd id="c-time">—</dd></div>
+    <div><dt>Players</dt><dd id="c-players">4</dd></div>
+    <div><dt>Rate</dt><dd id="c-rate">—</dd></div>
+   </dl>
+   <p class="card-total"><span>Total</span><strong id="c-total">—</strong></p>
+  </div>
+
+  <form class="pay" id="pay" novalidate>
+   <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+   <div class="field"><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="405"></div>
+   <p class="field-note">We text your confirmation here. Nothing else, unless you ask.</p>
+   <div class="pay-choice" role="radiogroup" aria-label="How you'd like to pay">
+    <label><input type="radio" name="how" value="now" checked><span><b>Pay now</b><small id="save-note">Save $4 a player</small></span><strong id="now-total">—</strong></label>
+    <label><input type="radio" name="how" value="shop"><span><b>Pay at the pro shop</b><small>Full rate on the day</small></span><strong id="shop-total">—</strong></label>
+   </div>
+   <button class="btn btn-lime pay-btn" type="submit" id="pay-btn" disabled>Choose a time first</button>
+   <p class="pay-fine">Free to move or cancel until 6pm the day before.</p>
+  </form>
+ </aside>
+
+ <!-- ---------- confirmation ---------- -->
+ <section class="done" id="done" hidden aria-live="polite">
+  <div class="done-card">
+   <img class="card-logo" src="../assets/logo-white.png" alt="" width="640" height="488">
+   <p class="done-kicker">You're on the sheet</p>
+   <p class="done-time"><span class="numeral" id="d-time">—</span><span class="ampm" id="d-ampm"></span></p>
+   <p class="done-day" id="d-day">—</p>
+   <p class="done-line" id="d-line">—</p>
+   <p class="done-line">Check in at the pro shop ten minutes before. Carts are by the first tee.</p>
+   <div class="done-actions">
+    <a class="btn btn-lime" id="d-cal" href="#" download="links-tee-time.ics">Add to calendar</a>
+    <button class="btn btn-ghost" type="button" id="d-again">Book another</button>
+   </div>
+  </div>
+  <div class="text-next">
+   <p class="text-h">Next time, just text.</p>
+   <div class="text-demo" aria-label="Example text conversation">
+    <p class="me">Saturday morning, 4 of us</p>
+    <p class="them">7:30, 7:50 or 8:10. $42 each with cart. Reply 1, 2 or 3.</p>
+    <p class="me">2</p>
+    <p class="them">Booked. 7:50 Saturday, 4 players. Pay now and save $16: links.golf/p/7f3</p>
+   </div>
+   <p class="text-note">Text booking is coming to the pro shop number. This is what it will look like.</p>
+  </div>
+ </section>
+
+</main>
+
+<footer class="foot">
+ <p>The Links at Norman · 3927 24th Ave SE, Norman OK 73071 · <a href="tel:+14053296549">405-329-6549</a></p>
+ <p class="foot-demo">Demo tee sheet with sample rates. Designed by <a href="https://station.solutions">Station.Solutions</a>.</p>
+</footer>
+
+<script src="book.js" defer></script>
+</body>
+</html>
