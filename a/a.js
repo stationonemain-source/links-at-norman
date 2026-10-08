@@ -33,6 +33,7 @@
     holes.forEach((h) => h.classList.toggle('active', +h.dataset.n === n));
     tags.forEach((t) => { if (+t.dataset.n === n) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
     if (hash) history.replaceState(null, '', '#hole-' + n);
+    requestAnimationFrame(() => window.scaleMarks && window.scaleMarks());
     if (scroll && matchMedia('(max-width: 900px)').matches) {
       $('#holes').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
     }
@@ -50,6 +51,17 @@
   });
   const fromHash = /^#hole-(\d{1,2})$/.exec(location.hash);
   show(fromHash ? +fromHash[1] : 13, { hash: false });
+
+
+  /* yardage labels: hold ~13px on screen whatever scale the plate is drawn at */
+  function scaleMarks() {
+    document.querySelectorAll('svg.line').forEach((svg) => {
+      const w = svg.getBoundingClientRect().width; if (!w) return;
+      const s = Math.max(1, (svg.viewBox.baseVal.width / w) * 13 / 46);
+      svg.style.setProperty('--ls', s.toFixed(3));
+    });
+  }
+  window.scaleMarks = scaleMarks; scaleMarks(); addEventListener('resize', scaleMarks); addEventListener('load', scaleMarks);
 
   /* the skyline rises once, when it comes into view */
   const sky = $('#skyline');

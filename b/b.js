@@ -22,7 +22,8 @@
   }
   /* which page is open: read it off the scroll position, settled */
   let t;
-  const sync = () => mark(Math.max(1, Math.min(18, Math.round(track.scrollLeft / track.clientWidth) + 1)));
+  const step = () => (pages[1] ? pages[1].offsetLeft - pages[0].offsetLeft : track.clientWidth);
+  const sync = () => mark(Math.max(1, Math.min(18, Math.round(track.scrollLeft / step()) + 1)));
   track.addEventListener('scroll', () => { touched = true; clearTimeout(t); t = setTimeout(sync, 90); }, { passive: true });
 
   $('#prev').addEventListener('click', () => goTo(current - 1));
@@ -38,6 +39,17 @@
     goTo(+a.dataset.n, { smooth: false });
     $('#book').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
   });
+
+
+  /* yardage labels: hold ~13px on screen whatever scale the plate is drawn at */
+  function scaleMarks() {
+    document.querySelectorAll('svg.line').forEach((svg) => {
+      const w = svg.getBoundingClientRect().width; if (!w) return;
+      const s = Math.max(1, (svg.viewBox.baseVal.width / w) * 13 / 46);
+      svg.style.setProperty('--ls', s.toFixed(3));
+    });
+  }
+  scaleMarks(); addEventListener('resize', scaleMarks); addEventListener('load', scaleMarks);
 
   const fromHash = /^#page-(\d{1,2})$/.exec(location.hash);
   const start = fromHash ? +fromHash[1] : 1;

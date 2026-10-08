@@ -21,6 +21,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+[id] { scroll-margin-top: 72px; }
+@media (max-width: 1000px) { [id] { scroll-margin-top: 104px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; background: var(--page); color: var(--ink); font: 400 18px/1.5 var(--serif); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; height: auto; }
@@ -83,7 +85,7 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
 .spread { max-width: var(--max); margin: clamp(36px, 4vw, 64px) auto 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .pages {
   display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-  scrollbar-width: none; overscroll-behavior-x: contain; position: relative;
+  scrollbar-width: none; overscroll-behavior-x: contain; position: relative; column-gap: 48px;
 }
 .pages::-webkit-scrollbar { display: none; }
 .page {
@@ -91,12 +93,13 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
   display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: clamp(20px, 3vw, 48px) clamp(32px, 5vw, 80px);
   padding: clamp(28px, 4vw, 56px) 0;
 }
-.page .plate { grid-column: 1 / -1; --ph: min(520px, 60vh); display: flex; justify-content: center; margin: 0; }
+.page .plate { grid-column: 1 / -1; --ph: min(520px, 60vh); display: flex; justify-content: center; align-items: flex-start; margin: 0; }
 .plate-in { position: relative; display: block; aspect-ratio: var(--w) / var(--h); }
 .plate-p { width: min(100%, calc(var(--ph) * var(--w) / var(--h))); }
 .plate-l { width: min(100%, calc(var(--ph) * var(--w) / var(--h))); }
 .plate-p { display: none; }
 .plate-in img, .plate-in .line { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.plate-in img { object-fit: cover; }
 .plate-in .line { pointer-events: none; }
 .plate-in .line text { font-family: var(--sans); font-weight: 600; font-size: 38px; fill: var(--ink); }
 .line .halo { fill: none; stroke: #fff; stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; opacity: .9; }
@@ -136,7 +139,7 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
 .scorecard thead th[aria-current="true"] a { background: var(--lime); }
 .scorecard .tot { font-weight: 600; background: #F6F6F6; }
 .card-aside h3 { font-size: 1.5rem; margin-top: 4px; }
-.card-aside h3 + h3, .card-aside p + h3 { margin-top: 32px; }
+.card-aside h3 + h3, .card-aside p + h3, .card-aside dl + h3 { margin-top: 32px; }
 .card-aside dl { margin-top: 12px; font-family: var(--sans); font-size: 15.5px; }
 .card-aside dl div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--rule); }
 .card-aside dd { font-variant-numeric: tabular-nums; }
@@ -200,6 +203,11 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
 .colophon a { color: var(--ink); }
 
 /* ---------- responsive ---------- */
+@media (max-width: 1500px) and (min-width: 1001px) {
+  .opener-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .stand { max-width: 60ch; }
+  .facts { justify-self: start; }
+}
 @media (max-width: 1000px) {
   .mast { padding: 10px var(--gutter) 8px; gap: 8px 16px; }
   .mast-name span { display: none; }
@@ -207,14 +215,15 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
   .mast .tee { margin-left: auto; padding: 8px 12px; }
   .opener-grid, .book-head, .club-head, .card-wrap, .mem-grid, .visit { grid-template-columns: 1fr; }
   .page { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .page .plate { --ph: min(560px, 58vh); }
+  .page .plate { --ph: min(480px, 56vh); }
+  .page { align-content: start; }
   .plate-l { display: none; }
   .plate-p { display: block; }
   .plate-in .line text { font-size: 46px; }
   .card-tables { overflow: visible; }
   .scorecard { min-width: 0; font-size: 12px; }
   .scorecard th, .scorecard td { padding: 9px 2px; }
-  .scorecard .lab { width: 10%; font-size: 11px; }
+  .scorecard .lab { width: 10%; font-size: 12px; }
   .scorecard thead th a { min-width: 1.5em; padding: 3px 1px; }
   .scorecard th:nth-child(12), .scorecard td:nth-child(12) { display: none; }   /* the Total column moves to a line below */
   .card-total { display: block; margin-top: 12px; font-family: var(--sans); font-size: 13.5px; color: var(--ink-2); }
@@ -234,3 +243,7 @@ section { padding: clamp(56px, 8vw, 120px) var(--gutter); }
 @media (prefers-reduced-motion: reduce) {
   .btn, .turn { transition: none; }
 }
+
+/* yardage labels hold a constant on-screen size; --ls is set by the page script */
+.line .ys { transform: scale(var(--ls, 1)); transform-box: fill-box; transform-origin: 0 50%; }
+.line .ys-r { transform-origin: 100% 50%; }
